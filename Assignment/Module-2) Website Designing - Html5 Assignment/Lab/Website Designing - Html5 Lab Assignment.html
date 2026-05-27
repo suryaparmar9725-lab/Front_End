@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+   <video height="300px" controls autoplay loop muted src="./Video And Audio File/Sample Video.mp4"></video>
+   <br>
+   <audio controls autoplay loop muted src="./Video And Audio File/Sample Video.mp4"></audio>
+   <br>
+
+    <canvas id="mycanvas"></canvas>
+        <script>
+            var canvas = document.getElementById("mycanvas")
+            var big=canvas.getContext('2d');
+            big.fillStyle='blue';
+            big.fillRect(90,60,500,500);
+            big.stroke();   
+        </script>   
+        <br><br>
+        <svg >
+            <rect x="90" y="40" stroke="black" fill="lightgreen" width="200" height="100" />
+        </svg>
+</body>
+</html>

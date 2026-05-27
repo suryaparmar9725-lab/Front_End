@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Product card</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif ;
+            margin: 20px;
+            background: lightgray;
+        }
+
+        .main {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        h1{
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 60px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+            overflow: hidden;
+            text-align: center;
+            transition: transform 0.3s,box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 10px 8px 16px rgba(0, 0, 0, 0.5);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            size: 100% 100%;
+        }
+
+        .card h4 {
+            margin: 15px 0 5px;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .card p {
+            margin-bottom: 15px;
+            font-size: 17px;
+            color:rgb(82, 80, 80);
+        }
+    </style>
+</head>
+
+<body>
+    <h1> Product Cards</h1>
+    <div class="main">
+        <div class="card">
+            <img src="/image/card1.avif" alt="Nike Dunk Low Retro">
+            <h4>Nike Dunk Low Retro</h4>
+            <p>₹ 8,295.00</p>
+        </div>
+        <div class="card">
+            <img src="/image/card2.avif" alt="Nike Air Max Plus">
+            <h4>Nike Air Max Plus</h4>
+            <p>₹ 14,247.00</p>
+        </div>
+        <div class="card">
+            <img src="/image/card3.avif" alt="Nike Air Max INTRLK Lite">
+            <h4>Nike Air Max INTRLK Lite</h4>
+            <p>₹ 7,095.00</p>
+        </div>
+        <div class="card">
+            <img src="/image/card4.avif" alt="Cushup Cloudfoam Walking Shoes">
+            <h4>Cushup Cloudfoam Walking Shoes</h4>
+            <p>₹2,279.50</p>
+        </div>
+        <div class="card">
+            <img src="/image/card5.avif" alt="Galaxy 6 Shoes">
+            <h4>Galaxy 6 Shoes</h4>
+            <p>₹5,999.00</p>
+        </div>
+        <div class="card">
+            <img src="/image/card6.avif" alt="Response Super Shoes">
+            <h4>Response Super Shoes</h4>
+            <p>₹8,999.00</p>
+        </div>
+    </div>
+</body>
+
+</html>

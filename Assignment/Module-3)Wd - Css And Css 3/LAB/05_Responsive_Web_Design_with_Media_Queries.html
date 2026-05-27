@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Web Design with Media Queries</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Times New Roman', Times, serif;
+            background: lightgray;
+        }
+
+        nav {
+            background: black;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav h1 {
+            margin: 0px;
+            font-size: 25px;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0px;
+            padding: 0px;
+            display: flex;
+            gap: 40px;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 25px;
+            padding: 30px;
+        }
+
+        .main-content {
+            background-color: rgba(173, 171, 171, 0.582);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.4);
+        }
+
+        .sidebar {
+            background-color: rgba(209, 205, 205, 0.918);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.4);
+        }
+
+        footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+        
+        @media only screen and (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav h1 {
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .content {
+        grid-template-columns: 1fr; /* Stack columns */
+      }
+
+      .main-content, .sidebar {
+        padding: 15px;
+        font-size: 14px;
+      }
+
+      footer {
+        font-size: 14px;
+        padding: 10px;
+      }
+    }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <h1>My Website</h1>
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Contact</a></li>
+            <li><a href="">Help</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <div class="main-content">
+            <h2>Main Content</h2>
+            <p>This is the main content area.</p>
+        </div>
+        <div class="sidebar">
+            <h2>Sidebar</h2>
+            <p>This is the sidebar area.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 My Website. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>

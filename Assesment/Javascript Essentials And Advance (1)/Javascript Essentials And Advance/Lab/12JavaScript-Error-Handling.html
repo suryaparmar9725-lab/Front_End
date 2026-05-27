@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        try {
+            let num = 30;
+            let divi = 2;
+
+            if (divi === 0) {
+                throw "Error: Cannot divide a number by zero!";
+            }
+
+            let result = num / divi;
+            console.log(result);
+
+        } 
+        catch (error) {
+            console.log(error);       
+            alert(error);             
+        }
+
+    </script>
+</body>
+
+</html>

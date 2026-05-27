@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="clock"></h1>
+    <script>
+
+        //Change background color after 5 seconds
+        setTimeout(() => {
+            document.body.style.backgroundColor = "blue";
+        }, 5000);
+
+        //Digital Clock using setInterval()
+
+        function updateClock() {
+            let now = new Date();
+            let time = now.toLocaleTimeString(); 
+            document.getElementById("clock").innerHTML = time;
+        }
+
+       
+        setInterval(updateClock, 1000);
+
+        updateClock();
+
+    </script>
+</body>
+
+</html>
