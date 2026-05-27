@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Customer Interaction System</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Hashcrypt Technologies Pvt. Ltd.</h1>
+    </header>
+
+    <!-- Navbar -->
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <!-- Slider -->
+    <section class="slider">
+        <h2>Customer Complaint Portal</h2>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container">
+
+        <!-- Complaint Form -->
+        <div class="form-section">
+
+            <h2>Account / Complaint Form</h2>
+
+            <form id="complaintForm">
+
+                <!-- Name -->
+                <div class="form-group">
+                    <label>Name</label>
+                    <input type="text" id="name" placeholder="Enter Name">
+                    <small class="error" id="nameError"></small>
+                </div>
+
+                <!-- Phone -->
+                <div class="form-group">
+                    <label>Phone</label>
+                    <input type="text" id="phone" placeholder="Enter 10 Digit Number">
+                    <small class="error" id="phoneError"></small>
+                </div>
+
+                <!-- Email -->
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="text" id="email" placeholder="Enter Email">
+                    <small class="error" id="emailError"></small>
+                </div>
+
+                <!-- Vehicle -->
+                <div class="form-group">
+                    <label>Vehicle</label>
+                    <input type="text" id="vehicle" placeholder="Enter Vehicle Name">
+                    <small class="error" id="vehicleError"></small>
+                </div>
+
+                <!-- Complaint -->
+                <div class="form-group">
+                    <label>Complaint</label>
+                    <textarea id="complaint" placeholder="Enter Complaint"></textarea>
+                    <small class="error" id="complaintError"></small>
+                </div>
+
+                <!-- Buttons -->
+                <div class="button-group">
+                    <button type="submit">Submit</button>
+                    <button type="reset">Reset</button>
+                </div>
+
+                <!-- Success Message -->
+                <p id="successMessage"></p>
+
+            </form>
+        </div>
+
+        <!-- Submission Table -->
+        <div class="table-section">
+
+            <h2>Submitted Complaints</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Phone</th>
+                        <th>Email</th>
+                        <th>Vehicle</th>
+                        <th>Complaint</th>
+                    </tr>
+                </thead>
+
+                <tbody id="tableBody">
+
+                </tbody>
+            </table>
+
+            <p id="noData"></p>
+
+        </div>
+
+    </div>
+
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
