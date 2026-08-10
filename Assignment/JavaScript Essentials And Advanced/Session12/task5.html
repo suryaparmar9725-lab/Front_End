@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Playlist</title>
+</head>
+
+<body>
+
+  <h1>Create New Playlist</h1>
+
+  <script>
+    function addNewPlaylist() {
+      const playlist = {
+        name: "My Favorite Songs",
+        description: "A playlist of my favorite music tracks."
+      };
+
+      fetch("https://jsonplaceholder.typicode.com/posts", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(playlist)
+      })
+        .then(response => response.json())
+        .then(data => {
+          console.log("Playlist Response:", data);
+        })
+        .catch(error => {
+          console.log("Error:", error);
+        });
+    }
+
+    addNewPlaylist();
+  </script>
+
+</body>
+</html>

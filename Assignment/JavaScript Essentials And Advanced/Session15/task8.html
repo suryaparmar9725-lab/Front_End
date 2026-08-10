@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Spotify Playlist Class</title>
+</head>
+
+<body>
+
+    <h2>Updated Playlist</h2>
+
+    <script>
+
+        // Create Playlist class
+        class Playlist {
+
+            constructor(name, songs) {
+
+                this.name = name;
+                this.songs = songs;
+
+            }
+
+
+            // Method to add a new song
+            addSong(songName) {
+
+                this.songs.push(songName);
+
+            }
+
+
+            // Method to display playlist
+            displayPlaylist() {
+
+                console.log(`Playlist: ${this.name}`);
+
+                console.log("Songs:", this.songs);
+
+            }
+
+        }
+
+
+        // Create playlist instance
+        const myPlaylist = new Playlist(
+            "Chill Vibes",
+            [
+                "Perfect - Ed Sheeran",
+                "Believer - Imagine Dragons"
+            ]
+        );
+
+
+        // Add two new songs
+        myPlaylist.addSong("Heat Waves - Glass Animals");
+
+        myPlaylist.addSong("Lovely - Billie Eilish");
+
+
+        // Display updated playlist
+        myPlaylist.displayPlaylist();
+
+
+    </script>
+
+</body>
+</html>

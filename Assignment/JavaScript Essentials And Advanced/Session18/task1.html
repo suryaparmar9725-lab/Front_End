@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Instagram Console Notifications</title>
+</head>
+
+<body>
+
+    <h2>Instagram Upload Simulation</h2>
+
+    <button onclick="uploadPost()">Upload Post</button>
+
+
+    <script>
+
+        function uploadPost() {
+
+            let imageUploaded = true;
+            let caption = "";
+
+
+            // Successful post upload notification
+            if(imageUploaded) {
+                console.log("✅ Post uploaded successfully!");
+            }
+
+
+            // Warning if caption is missing
+            if(caption === "") {
+                console.warn("⚠️ Warning: Caption is missing!");
+            }
+
+
+            // Error if image upload fails
+            if(!imageUploaded) {
+                console.error("❌ Error: Image upload failed!");
+            }
+
+        }
+
+
+    </script>
+
+</body>
+</html>

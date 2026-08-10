@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Favorite Songs Remove List</title>
+
+    <style>
+        li {
+            width: 300px;
+            padding: 10px;
+            margin: 8px;
+            border: 1px solid black;
+            display: flex;
+            justify-content: space-between;
+            border-radius: 5px;
+        }
+
+        button {
+            cursor: pointer;
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+    </style>
+
+</head>
+<body>
+
+    <h2>My Favorite Songs</h2>
+
+    <ul id="songList">
+        <li>
+            Believer - Imagine Dragons
+            <button class="removeBtn">Remove</button>
+        </li>
+
+        <li>
+            Perfect - Ed Sheeran
+            <button class="removeBtn">Remove</button>
+        </li>
+
+        <li>
+            Shape of You - Ed Sheeran
+            <button class="removeBtn">Remove</button>
+        </li>
+
+        <li>
+            Night Changes - One Direction
+            <button class="removeBtn">Remove</button>
+        </li>
+    </ul>
+
+
+    <script>
+
+        // Parent element
+        let songList = document.getElementById("songList");
+
+
+        // Event Delegation: Single click listener
+        songList.addEventListener("click", function(event) {
+
+            // Check if Remove button is clicked
+            if(event.target.classList.contains("removeBtn")) {
+
+                // Remove the parent list item
+                event.target.parentElement.remove();
+
+            }
+
+        });
+
+    </script>
+
+</body>
+</html>

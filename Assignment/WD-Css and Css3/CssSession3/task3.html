@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Floating Order Now Button</title>
+
+    <style>
+        body {
+            height: 1200px; /* To test scrolling */
+            font-family: Arial, sans-serif;
+        }
+
+        .order-btn {
+            position: fixed;
+
+            /* Fixed at bottom-right corner */
+            bottom: 20px;
+            right: 20px;
+
+            background-color: #e23744;
+            color: white;
+
+            padding: 15px 25px;
+            border: none;
+            border-radius: 30px;
+
+            font-size: 18px;
+            font-weight: bold;
+
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+
+        .order-btn:hover {
+            background-color: #c72c38;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Zomato Food Delivery</h1>
+
+    <p>
+        Explore delicious food from your favorite restaurants.
+        Scroll down the page and the Order Now button will stay visible.
+    </p>
+
+    <button class="order-btn">
+        Order Now
+    </button>
+
+</body>
+</html>

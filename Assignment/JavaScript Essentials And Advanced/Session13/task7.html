@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Handle Undefined Object Error</title>
+</head>
+
+<body>
+
+    <h2>User Data Error Handling</h2>
+
+    <script>
+
+        let user;
+
+
+        try {
+
+            // Trying to access property of undefined object
+            console.log(user.name);
+
+        } 
+        catch (e) {
+
+            // User-friendly error message
+            console.log("User data not found");
+
+        }
+
+    </script>
+
+</body>
+</html>

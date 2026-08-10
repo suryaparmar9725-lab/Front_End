@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primitive vs Reference Types</title>
+</head>
+<body>
+
+    <h2>Primitive vs Reference Types</h2>
+
+    <script>
+        // Primitive Type Example
+        let user1 = "Priya";
+        let user2 = user1;
+
+        user1 = "Riya";
+
+        console.log("user1:", user1);
+        console.log("user2:", user2);
+
+        // Reference Type Example
+        let favApps1 = ["Instagram", "Spotify"];
+        let favApps2 = favApps1;
+
+        favApps1.push("Zomato");
+
+        console.log("favApps1:", favApps1);
+        console.log("favApps2:", favApps2);
+
+        // Observation:
+        // Primitive values are copied by value,
+        // so changing user1 does not affect user2.
+        // Arrays are reference types, so both variables
+        // point to the same array. Changes in one are
+        // reflected in the other.
+    </script>
+
+</body>
+</html>

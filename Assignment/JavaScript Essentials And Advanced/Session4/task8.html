@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flipkart Product Prices</title>
+</head>
+<body>
+
+    <h2>Flipkart Total Product Price</h2>
+
+    <script>
+        // Array of Flipkart product prices
+        let prices = [74999, 55999, 1999, 3499, 1299];
+
+        // Variable to store the total price
+        let totalPrice = 0;
+
+        // Calculate the total using a for...of loop
+        for (let price of prices) {
+            totalPrice += price;
+        }
+
+        // Print the total price
+        console.log("Total Price:", totalPrice);
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Clear Favorite Restaurants</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        input, button {
+            padding: 10px;
+            margin: 5px;
+        }
+
+        li {
+            margin: 8px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>My Favorite Zomato Restaurants</h2>
+
+    <input type="text" id="restaurantName" placeholder="Enter restaurant name">
+
+    <button onclick="addRestaurant()">Add Restaurant</button>
+
+    <button onclick="clearFavorites()">Clear Favorites</button>
+
+
+    <h3>Restaurant List:</h3>
+
+    <ul id="restaurantList"></ul>
+
+
+    <script>
+
+        // Load restaurants from localStorage
+        let restaurants = JSON.parse(
+            localStorage.getItem("zomatoRestaurants")
+        ) || [];
+
+
+        // Display restaurant list
+        function displayRestaurants() {
+
+            const list = document.getElementById("restaurantList");
+
+            list.innerHTML = "";
+
+
+            if(restaurants.length === 0) {
+
+                list.innerHTML = "<li>No favorite restaurants found</li>";
+
+                return;
+            }
+
+
+            restaurants.forEach((restaurant, index) => {
+
+                list.innerHTML += `
+                    <li>
+                        ${index + 1}. ${restaurant}
+                    </li>
+                `;
+
+            });
+
+        }
+
+
+        // Add restaurant
+        function addRestaurant() {
+
+            const name = document.getElementById("restaurantName").value;
+
+
+            if(name === "") {
+                alert("Enter restaurant name");
+                return;
+            }
+
+
+            if(restaurants.length < 3) {
+
+                restaurants.push(name);
+
+
+                localStorage.setItem(
+                    "zomatoRestaurants",
+                    JSON.stringify(restaurants)
+                );
+
+
+                document.getElementById("restaurantName").value = "";
+
+                displayRestaurants();
+
+            }
+            else {
+                alert("Only top 3 restaurants allowed");
+            }
+
+        }
+
+
+        // Clear favorite restaurants
+        function clearFavorites() {
+
+            // Remove data from localStorage
+            localStorage.removeItem("zomatoRestaurants");
+
+
+            // Empty array
+            restaurants = [];
+
+
+            // Refresh UI
+            displayRestaurants();
+
+        }
+
+
+        // Load data on page start
+        displayRestaurants();
+
+    </script>
+
+</body>
+</html>

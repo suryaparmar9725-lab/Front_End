@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Remove Playlist</title>
+</head>
+<body>
+
+  <h2>Spotify Playlist</h2>
+
+  <p>Open the browser console to see the removed playlist.</p>
+
+  <script>
+    const playlists = [
+      {
+        name: "Top Bollywood Hits",
+        creator: "Spotify Music",
+        numberOfSongs: 50
+      },
+      {
+        name: "Workout Energy",
+        creator: "DJ Beats",
+        numberOfSongs: 35
+      },
+      {
+        name: "Chill Vibes",
+        creator: "Arijit Singh",
+        numberOfSongs: 40
+      }
+    ];
+
+    // Remove the last playlist using pop()
+    const removedPlaylist = playlists.pop();
+
+    // Display removed object
+    console.log("Removed Playlist:", removedPlaylist);
+
+    // Display updated array
+    console.log("Updated Playlists:", playlists);
+  </script>
+
+</body>
+</html>

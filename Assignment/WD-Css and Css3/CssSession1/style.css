@@ -1,0 +1,38 @@
+body{
+
+    font-family: Arial, sans-serif;
+    padding:20px;
+
+}
+
+
+h1{
+
+    background-color: tomato;
+    color:white;
+    padding:15px;
+
+}
+
+
+p{
+
+    font-size:20px;
+    line-height:1.5;
+
+}
+
+
+h2{
+
+    color:green;
+
+}
+
+
+li{
+
+    font-size:18px;
+    margin:8px;
+
+}

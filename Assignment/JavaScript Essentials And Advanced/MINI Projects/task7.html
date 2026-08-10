@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Manage Playlist Links</title>
+</head>
+
+<body>
+
+<h2>Playlist Link Manager</h2>
+
+<button onclick="addLink()">Add Link</button>
+
+<button onclick="editLink()">Edit Link</button>
+
+
+<script>
+
+
+let myPlaylists = JSON.parse(
+    localStorage.getItem("myPlaylists")
+) || [];
+
+
+
+// Reusable Add/Edit Function
+
+function manageLink(linkObj, mode){
+
+
+    if(mode === "add"){
+
+
+        myPlaylists.push(linkObj);
+
+
+    }
+
+
+    else if(mode === "edit"){
+
+
+        myPlaylists[linkObj.index] = {
+
+            name: linkObj.name,
+
+            url: linkObj.url
+
+        };
+
+
+    }
+
+
+
+    // Single LocalStorage Update
+
+    localStorage.setItem(
+        "myPlaylists",
+        JSON.stringify(myPlaylists)
+    );
+
+
+    console.log(myPlaylists);
+
+
+}
+
+
+
+
+// Add Playlist
+
+function addLink(){
+
+
+    manageLink({
+
+        name:"Workout Songs",
+
+        url:"https://spotify.com/workout"
+
+    }, "add");
+
+
+}
+
+
+
+
+// Edit Playlist
+
+function editLink(){
+
+
+    manageLink({
+
+        index:0,
+
+        name:"Chill Songs",
+
+        url:"https://spotify.com/chill"
+
+    }, "edit");
+
+
+}
+
+
+</script>
+
+
+</body>
+</html>

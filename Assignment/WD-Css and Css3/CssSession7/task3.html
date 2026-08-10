@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Priority Example</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Internal CSS -->
+    <style>
+        .playlist {
+            background-color: lightcoral;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Profile Card -->
+    <section class="profile-card">
+        <h2>Profile Card</h2>
+        <p>Music Lover 🎵</p>
+    </section>
+
+    <!-- Playlist -->
+    <section class="playlist">
+        <h2>My Playlist</h2>
+        <ul>
+            <li>Chill Vibes</li>
+            <li>Workout Mix</li>
+            <li>Top Hits</li>
+        </ul>
+    </section>
+
+    <!-- Inline style has the highest priority, so the background becomes pink. -->
+    <section class="hashtags" style="background-color: pink;">
+        <h2>Trending Hashtags</h2>
+        <ul>
+            <li>#Music</li>
+            <li>#NowPlaying</li>
+            <li>#Trending</li>
+        </ul>
+    </section>
+
+</body>
+</html>

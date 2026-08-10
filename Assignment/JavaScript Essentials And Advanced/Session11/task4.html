@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Song Lyrics Callback</title>
+</head>
+<body>
+
+<script>
+  function fetchSongLyrics(song, callback) {
+    setTimeout(() => {
+      const lyrics = `Lyrics of ${song}: This is a sample lyrics string.`;
+
+      callback(lyrics);
+    }, 1000);
+  }
+
+  fetchSongLyrics("Believer", function(lyrics) {
+    console.log(lyrics);
+  });
+</script>
+
+</body>
+</html>

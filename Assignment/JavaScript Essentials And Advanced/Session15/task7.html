@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Movie Class Example</title>
+</head>
+
+<body>
+
+    <h2>Movie Details</h2>
+
+    <script>
+
+        // Refactored function constructor into class
+        class Movie {
+
+            constructor(title, genre) {
+
+                this.title = title;
+                this.genre = genre;
+
+            }
+
+
+            // Method equivalent to Movie.prototype.display
+            display() {
+
+                console.log(
+                    this.title + " - " + this.genre
+                );
+
+            }
+
+        }
+
+
+        // Create Movie instance
+        const movie1 = new Movie(
+            "Jawan",
+            "Action"
+        );
+
+
+        // Call display method
+        movie1.display();
+
+
+    </script>
+
+</body>
+</html>

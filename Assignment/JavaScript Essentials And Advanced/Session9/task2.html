@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Food Delivery Apps JSON</title>
+</head>
+<body>
+
+    <h2>My Favorite Food Delivery Apps</h2>
+    <div id="apps"></div>
+
+    <script>
+
+        // Create array of top 3 food delivery apps
+        const foodApps = [
+            "Zomato",
+            "Swiggy",
+            "Domino's"
+        ];
+
+
+        // Convert array to JSON string
+        const jsonApps = JSON.stringify(foodApps);
+
+
+        // Log JSON string in console
+        console.log(jsonApps);
+
+
+        // Display JSON string on webpage
+        document.getElementById("apps").innerHTML = `
+            <h3>${jsonApps}</h3>
+        `;
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Playlist URL Validation</title>
+
+<style>
+
+.error{
+    color:red;
+}
+
+.success{
+    color:green;
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+<h2>Add Playlist Link</h2>
+
+
+<input 
+type="text" 
+id="playlistURL" 
+placeholder="Enter Spotify or YouTube URL"
+>
+
+
+<p id="message"></p>
+
+
+<button onclick="checkLink()">
+Validate Link
+</button>
+
+
+
+<script>
+
+
+function validateLink(url){
+
+
+    return (
+        url.startsWith("https://") &&
+        (
+            url.includes("spotify.com") ||
+            url.includes("youtube.com")
+        )
+    );
+
+
+}
+
+
+
+
+function checkLink(){
+
+
+    let url = document.getElementById("playlistURL").value;
+
+    let message = document.getElementById("message");
+
+
+
+    if(validateLink(url)){
+
+
+        message.innerHTML = 
+        "Valid Playlist URL";
+
+
+        message.className = "success";
+
+
+    }
+    else{
+
+
+        message.innerHTML = 
+        "Invalid URL. Use Spotify or YouTube playlist link";
+
+
+        message.className = "error";
+
+
+    }
+
+
+}
+
+
+</script>
+
+
+</body>
+</html>

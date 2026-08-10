@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Spotify Playlist URL Validation</title>
+</head>
+
+<body>
+
+    <h2>Spotify Playlist URL Checker</h2>
+
+    <script>
+
+        // Function to check Spotify URL
+        function checkPlaylistURL(url) {
+
+            const spotifyURL = "https://open.spotify.com/";
+
+
+            // Validate URL
+            if (!url.startsWith(spotifyURL)) {
+
+                throw new Error("Invalid Spotify URL");
+
+            }
+
+
+            return "Valid Spotify URL";
+
+        }
+
+
+        // Handle error using try...catch...finally
+        try {
+
+            console.log(
+                checkPlaylistURL("https://open.spotify.com/playlist/12345")
+            );
+
+
+            console.log(
+                checkPlaylistURL("https://youtube.com/playlist/12345")
+            );
+
+        } 
+        catch(error) {
+
+            // Display error message
+            console.log(error.message);
+
+        } 
+        finally {
+
+            // Always executes
+            console.log("Validation complete");
+
+        }
+
+    </script>
+
+</body>
+</html>

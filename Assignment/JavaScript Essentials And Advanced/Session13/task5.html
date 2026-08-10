@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Paytm Payment Validation</title>
+</head>
+
+<body>
+
+    <h2>Payment Amount Checker</h2>
+
+    <script>
+
+        // Function to check payment amount
+        function checkPaymentAmount(amount) {
+
+            // Throw error if amount is zero or negative
+            if (amount <= 0) {
+
+                throw new Error("Amount must be positive");
+
+            }
+
+
+            return "Payment accepted";
+
+        }
+
+
+        // Handle error using try...catch
+        try {
+
+            console.log(checkPaymentAmount(500));
+
+            console.log(checkPaymentAmount(0));
+
+        } 
+        catch(error) {
+
+            console.log(error.message);
+
+        }
+
+    </script>
+
+</body>
+</html>

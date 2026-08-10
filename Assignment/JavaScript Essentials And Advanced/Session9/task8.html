@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flipkart Wishlist</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        .product {
+            border: 1px solid gray;
+            padding: 10px;
+            margin: 10px;
+            width: 250px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Flipkart Wishlist</h2>
+
+    <div id="wishlist"></div>
+
+
+    <script>
+
+        // Create wishlist array of products
+        const products = [
+            {
+                name: "iPhone 15",
+                price: 69999
+            },
+            {
+                name: "Boat Headphones",
+                price: 1999
+            },
+            {
+                name: "HP Laptop",
+                price: 55000
+            }
+        ];
+
+
+        // Save wishlist data in localStorage
+        localStorage.setItem(
+            "wishlist",
+            JSON.stringify(products)
+        );
+
+
+        // Read wishlist data from localStorage
+        const savedWishlist = localStorage.getItem("wishlist");
+
+
+        // Convert JSON string back into array
+        const wishlistItems = JSON.parse(savedWishlist);
+
+
+        // Display wishlist items
+        let output = "";
+
+        wishlistItems.forEach(product => {
+
+            output += `
+                <div class="product">
+                    <h3>${product.name}</h3>
+                    <p>Price: ₹${product.price}</p>
+                </div>
+            `;
+
+        });
+
+
+        document.getElementById("wishlist").innerHTML = output;
+
+
+        // Console output
+        console.log(wishlistItems);
+
+
+    </script>
+
+</body>
+</html>

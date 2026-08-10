@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Zomato Restaurant Edit Feature</title>
+
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        .form-box {
+            width: 300px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+
+        input, button {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+        }
+
+        .add-btn {
+            background-color: green;
+            color: white;
+            border: none;
+        }
+
+        .update-btn {
+            background-color: blue;
+            color: white;
+            border: none;
+        }
+
+        .restaurant-card {
+            width: 300px;
+            padding: 15px;
+            margin-top: 15px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+
+        .edit {
+            background-color: orange;
+            color: white;
+            border: none;
+            width: 80px;
+        }
+
+        .delete {
+            background-color: red;
+            color: white;
+            border: none;
+            width: 80px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+
+<h2>Zomato Restaurant Manager</h2>
+
+
+<!-- Restaurant Form -->
+
+<div class="form-box">
+
+    <input 
+        type="text" 
+        id="restaurantName"
+        placeholder="Restaurant Name"
+    >
+
+
+    <input 
+        type="text" 
+        id="cuisine"
+        placeholder="Cuisine"
+    >
+
+
+    <input 
+        type="number" 
+        id="rating"
+        placeholder="Rating"
+    >
+
+
+    <button class="add-btn" onclick="addRestaurant()">
+        Add Restaurant
+    </button>
+
+
+    <button class="update-btn" onclick="updateRestaurant()">
+        Update Restaurant
+    </button>
+
+</div>
+
+
+
+<h2>Restaurant List</h2>
+
+<div id="restaurantList"></div>
+
+
+
+<script>
+
+
+let restaurants = [
+
+    {
+        id: 1,
+        name: "Pizza Palace",
+        cuisine: "Italian",
+        rating: 4.5
+    },
+
+    {
+        id: 2,
+        name: "Spice Hub",
+        cuisine: "Indian",
+        rating: 4.2
+    }
+
+];
+
+
+let editId = null;
+
+
+
+// Add Restaurant
+
+function addRestaurant(){
+
+
+    let restaurant = {
+
+        id: Date.now(),
+
+        name: document.getElementById("restaurantName").value,
+
+        cuisine: document.getElementById("cuisine").value,
+
+        rating: document.getElementById("rating").value
+
+    };
+
+
+    restaurants.push(restaurant);
+
+
+    displayRestaurants();
+
+    clearForm();
+
+}
+
+
+
+// Display Restaurants
+
+function displayRestaurants(){
+
+
+    let output = "";
+
+
+    restaurants.forEach(function(item){
+
+
+        output += `
+
+        <div class="restaurant-card">
+
+            <h3>${item.name}</h3>
+
+            <p>Cuisine: ${item.cuisine}</p>
+
+            <p>Rating: ⭐ ${item.rating}</p>
+
+
+            <button class="edit" onclick="editRestaurant(${item.id})">
+                Edit
+            </button>
+
+
+            <button class="delete" onclick="deleteRestaurant(${item.id})">
+                Delete
+            </button>
+
+        </div>
+
+        `;
+
+
+    });
+
+
+    document.getElementById("restaurantList").innerHTML = output;
+
+
+}
+
+
+
+// Edit Restaurant - Fill Form
+
+function editRestaurant(id){
+
+
+    let restaurant = restaurants.find(function(item){
+
+        return item.id === id;
+
+    });
+
+
+    document.getElementById("restaurantName").value = restaurant.name;
+
+    document.getElementById("cuisine").value = restaurant.cuisine;
+
+    document.getElementById("rating").value = restaurant.rating;
+
+
+    editId = id;
+
+
+}
+
+
+
+// Update Restaurant
+
+function updateRestaurant(){
+
+
+    let restaurant = restaurants.find(function(item){
+
+        return item.id === editId;
+
+    });
+
+
+    if(restaurant){
+
+
+        restaurant.name = document.getElementById("restaurantName").value;
+
+        restaurant.cuisine = document.getElementById("cuisine").value;
+
+        restaurant.rating = document.getElementById("rating").value;
+
+
+        displayRestaurants();
+
+        clearForm();
+
+        editId = null;
+
+    }
+
+}
+
+
+
+
+// Delete Restaurant
+
+function deleteRestaurant(id){
+
+
+    restaurants = restaurants.filter(function(item){
+
+        return item.id !== id;
+
+    });
+
+
+    displayRestaurants();
+
+
+}
+
+
+
+// Clear Form
+
+function clearForm(){
+
+    document.getElementById("restaurantName").value = "";
+
+    document.getElementById("cuisine").value = "";
+
+    document.getElementById("rating").value = "";
+
+}
+
+
+
+// Initial Display
+
+displayRestaurants();
+
+
+</script>
+
+
+</body>
+</html>

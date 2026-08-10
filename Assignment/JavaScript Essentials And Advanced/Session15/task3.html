@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Spotify Playlist Class</title>
+</head>
+
+<body>
+
+    <h2>Spotify Playlist</h2>
+
+    <script>
+
+        // Create Playlist class
+        class Playlist {
+
+            constructor(name, songs) {
+
+                this.name = name;
+                this.songs = songs;
+
+            }
+
+
+            // Method to display playlist details
+            displayPlaylist() {
+
+                let songList = this.songs.join(", ");
+
+                console.log(
+                    `Playlist: ${this.name}\nSongs: ${songList}`
+                );
+
+            }
+
+        }
+
+
+        // Create playlist instance
+        const myPlaylist = new Playlist(
+            "Chill Vibes",
+            [
+                "Perfect - Ed Sheeran",
+                "Believer - Imagine Dragons",
+                "Heat Waves - Glass Animals"
+            ]
+        );
+
+
+        // Call method
+        myPlaylist.displayPlaylist();
+
+
+    </script>
+
+</body>
+</html>

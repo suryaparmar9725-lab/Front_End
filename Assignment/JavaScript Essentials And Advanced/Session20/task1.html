@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Form Validation</title>
+
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        .login-box {
+            width: 300px;
+            padding: 30px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: blue;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .error {
+            color: red;
+            font-size: 14px;
+        }
+
+        .success {
+            color: green;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+
+<h2>Login Form</h2>
+
+
+<div class="login-box">
+
+
+    <input 
+        type="email" 
+        id="email" 
+        placeholder="Enter Email"
+    >
+
+    <p id="emailError" class="error"></p>
+
+
+
+    <input 
+        type="password" 
+        id="password" 
+        placeholder="Enter Password"
+    >
+
+    <p id="passwordError" class="error"></p>
+
+
+
+    <button onclick="login()">
+        Login
+    </button>
+
+
+    <p id="message"></p>
+
+
+</div>
+
+
+
+<script>
+
+
+function login(){
+
+
+    let email = document.getElementById("email").value;
+
+    let password = document.getElementById("password").value;
+
+
+
+    let emailError = document.getElementById("emailError");
+
+    let passwordError = document.getElementById("passwordError");
+
+    let message = document.getElementById("message");
+
+
+
+    // Clear previous errors
+
+    emailError.innerHTML = "";
+
+    passwordError.innerHTML = "";
+
+    message.innerHTML = "";
+
+
+
+    let isValid = true;
+
+
+
+    // Email validation
+
+    if(email === ""){
+
+        emailError.innerHTML = "Email is required";
+
+        isValid = false;
+
+    }
+
+
+
+    // Password validation
+
+    if(password === ""){
+
+        passwordError.innerHTML = "Password is required";
+
+        isValid = false;
+
+    }
+
+
+
+    // Success message
+
+    if(isValid){
+
+        message.innerHTML = "Login successful!";
+
+        message.className = "success";
+
+    }
+
+
+}
+
+
+
+</script>
+
+
+</body>
+</html>

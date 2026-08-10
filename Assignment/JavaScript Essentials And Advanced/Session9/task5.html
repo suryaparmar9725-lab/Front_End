@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Favorite Zomato Restaurants</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        input, button {
+            padding: 10px;
+            margin: 5px;
+        }
+
+        li {
+            margin: 8px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>My Top 3 Zomato Restaurants</h2>
+
+    <input type="text" id="restaurantName" placeholder="Enter restaurant name">
+
+    <button onclick="addRestaurant()">Add Restaurant</button>
+
+
+    <h3>Favorite Restaurants:</h3>
+
+    <ul id="restaurantList"></ul>
+
+
+    <script>
+
+        // Load restaurants from localStorage
+        let restaurants = JSON.parse(
+            localStorage.getItem("zomatoRestaurants")
+        ) || [];
+
+
+        // Display restaurants
+        function displayRestaurants() {
+
+            let list = document.getElementById("restaurantList");
+
+            list.innerHTML = "";
+
+            restaurants.forEach((restaurant, index) => {
+
+                list.innerHTML += `
+                    <li>
+                        ${index + 1}. ${restaurant}
+                    </li>
+                `;
+
+            });
+        }
+
+
+        // Add restaurant function
+        function addRestaurant() {
+
+            let name = document.getElementById("restaurantName").value;
+
+
+            if(name === "") {
+                alert("Please enter restaurant name");
+                return;
+            }
+
+
+            // Allow only top 3 restaurants
+            if(restaurants.length < 3) {
+
+                restaurants.push(name);
+
+
+                // Save array in localStorage
+                localStorage.setItem(
+                    "zomatoRestaurants",
+                    JSON.stringify(restaurants)
+                );
+
+
+                document.getElementById("restaurantName").value = "";
+
+                displayRestaurants();
+
+            } else {
+
+                alert("You can add only top 3 restaurants!");
+
+            }
+
+        }
+
+
+        // Automatically load data on page reload
+        displayRestaurants();
+
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Stack Trace Debugging</title>
+</head>
+
+<body>
+
+    <h2>User Fetch Debugging</h2>
+
+    <p>
+        Open Chrome DevTools → Console → Expand the error to view the call stack.
+    </p>
+
+
+    <script>
+
+        function getUser() {
+
+            return fetchUser();
+
+        }
+
+
+        function fetchUser() {
+
+            // Error occurs here
+            return JSON.parse(undefined);
+
+        }
+
+
+        // Start function call
+        getUser();
+
+
+    </script>
+
+</body>
+</html>

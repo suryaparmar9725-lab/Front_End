@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primitive vs Reference Types</title>
+</head>
+<body>
+
+    <h2>Primitive vs Reference Types</h2>
+
+    <script>
+        // Primitive Type Example
+        let favFood = "Pizza";
+        let favFoodCopy = favFood;
+
+        // Change the original variable
+        favFood = "Burger";
+
+        console.log("favFood:", favFood);
+        console.log("favFoodCopy:", favFoodCopy);
+
+        // Reference Type Example
+        let zomatoUser = {
+            city: "Ahmedabad"
+        };
+
+        let anotherUser = zomatoUser;
+
+        // Change the city using anotherUser
+        anotherUser.city = "Surat";
+
+        console.log("zomatoUser:", zomatoUser);
+        console.log("anotherUser:", anotherUser);
+
+        // Observation:
+        // Primitive values are copied by value,
+        // so changing favFood does not affect favFoodCopy.
+        // Objects are copied by reference,
+        // so changing one object affects both variables.
+    </script>
+
+</body>
+</html>

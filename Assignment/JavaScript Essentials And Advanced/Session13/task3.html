@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JSON Product Parser</title>
+</head>
+
+<body>
+
+    <h2>Flipkart Product JSON Parsing</h2>
+
+    <script>
+
+        // JSON string representing a Flipkart product
+        const productJSON = '{"name":"Shoes","price":999}';
+
+
+        try {
+
+            // Convert JSON string into JavaScript object
+            const product = JSON.parse(productJSON);
+
+            console.log("Product Name:", product.name);
+            console.log("Product Price:", product.price);
+
+        } 
+        catch(error) {
+
+            // Runs if JSON parsing fails
+            console.log("Invalid product data");
+
+        } 
+        finally {
+
+            // Always runs
+            console.log("Parsing attempt finished");
+
+        }
+
+    </script>
+
+</body>
+</html>

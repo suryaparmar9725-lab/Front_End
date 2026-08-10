@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Position Static vs Absolute</title>
+
+    <style>
+        .container {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            border: 2px solid black;
+        }
+        
+        .profile {
+            width:100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Absolute element */
+        .badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+
+            background-color: red;
+            color: white;
+
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+
+            text-align: center;
+            line-height: 30px;
+        }
+
+        .text {
+            margin-top: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h1>WhatsApp Notification Badge Example</h1>
+
+    <div class="container">
+
+        <img class="profile" 
+             src="https://plus.unsplash.com/premium_photo-1689977968861-9c91dbb16049?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fG1hbnxlbnwwfHwwfHx8MA%3D%3D" 
+             alt="Profile">
+
+        <!-- position:absolute element -->
+        <span class="badge">5</span>
+
+    </div>
+
+
+    <div class="text">
+
+        <h2>Explanation:</h2>
+
+        <p>
+            When an element has position: static, it stays in the normal
+            page flow and takes its own space.
+        </p>
+
+        <p>
+            When we change it to position: absolute, the element is removed
+            from the normal flow and can be placed anywhere inside its
+            positioned parent using top, right, bottom, and left properties.
+        </p>
+
+        <p>
+            Example: WhatsApp notification badge uses position:absolute
+            to place the unread message count on the top corner of a profile
+            image without disturbing the layout.
+        </p>
+
+    </div>
+
+</body>
+</html>

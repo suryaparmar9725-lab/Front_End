@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Instagram Followers Manager</title>
+</head>
+
+<body>
+
+    <h2>Instagram Add Follower</h2>
+
+    <button onclick="testFollowers()">
+        Add Followers
+    </button>
+
+    <p>
+        Open Console (F12) to see followers list.
+    </p>
+
+
+    <script>
+
+
+        // Followers array
+
+        let followers = [];
+
+
+
+        // Fixed addFollower function
+
+        function addFollower(name){
+
+
+            // Check for valid name
+
+            if(name && name.trim() !== ""){
+
+
+                followers.push(name);
+
+
+                console.log(
+                    name + " added successfully"
+                );
+
+
+            }
+            else{
+
+
+                console.warn(
+                    "Invalid follower name"
+                );
+
+
+            }
+
+
+        }
+
+
+
+
+        function testFollowers(){
+
+
+            addFollower("Rahul");
+
+            addFollower("");
+
+            addFollower(null);
+
+            addFollower("Priya");
+
+            addFollower("   ");
+
+
+
+            console.log("Followers List:", followers);
+
+
+        }
+
+
+
+    </script>
+
+
+</body>
+</html>

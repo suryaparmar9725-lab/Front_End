@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dark Mode Toggle</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+      background-color: white;
+      color: black;
+      transition: 0.3s;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Dark Mode Example</h2>
+
+  <button id="toggleBtn">Dark Mode</button>
+
+  <script>
+    const button = document.getElementById("toggleBtn");
+    let darkMode = false;
+
+    button.addEventListener("click", function () {
+      if (!darkMode) {
+        document.body.style.backgroundColor = "black";
+        document.body.style.color = "white";
+        button.innerHTML = "Light Mode";
+        darkMode = true;
+      } else {
+        document.body.style.backgroundColor = "white";
+        document.body.style.color = "black";
+        button.innerHTML = "Dark Mode";
+        darkMode = false;
+      }
+    });
+  </script>
+
+</body>
+</html>

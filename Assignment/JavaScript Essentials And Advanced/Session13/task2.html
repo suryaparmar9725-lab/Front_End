@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Username Validation</title>
+</head>
+
+<body>
+
+    <h2>Username Validator</h2>
+
+    <script>
+
+        // Function to validate username
+        function validateUsername(username) {
+
+            // Regular expression: only letters and numbers allowed
+            const usernamePattern = /^[a-zA-Z0-9]+$/;
+
+
+            // Check username format
+            if (!usernamePattern.test(username)) {
+
+                throw new Error("Invalid Username");
+
+            }
+
+
+            return "Valid Username";
+
+        }
+
+
+        // Using try...catch
+        try {
+
+            console.log(validateUsername("Surendra123"));
+
+            console.log(validateUsername("Surendra@123"));
+
+        } 
+        catch(error) {
+
+            console.log(error.message);
+
+        }
+
+    </script>
+
+</body>
+</html>

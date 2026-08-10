@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Priority Example</title>
+
+    <style>
+        p {
+            color: blue; /* Internal CSS sets paragraph color to blue */
+        }
+    </style>
+</head>
+
+<body>
+
+    <p style="color: red;">
+        This paragraph demonstrates CSS priority.
+    </p>
+
+    <!-- 
+        The displayed color will be RED.
+        Reason: Inline CSS has higher priority than Internal CSS.
+        CSS priority order:
+        Inline style > Internal CSS > External CSS > Browser default styles.
+    -->
+
+</body>
+</html>

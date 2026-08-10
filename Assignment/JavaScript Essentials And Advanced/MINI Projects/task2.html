@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Music Playlist Links</title>
+</head>
+
+<body>
+
+<h2>Add Playlist Link</h2>
+
+<button onclick="addLink()">Add Playlist</button>
+
+<script>
+
+let playlists = JSON.parse(localStorage.getItem("myPlaylists")) || [];
+
+
+function addPlaylistLink(linkObj){
+
+    playlists.push(linkObj);
+
+    localStorage.setItem(
+        "myPlaylists",
+        JSON.stringify(playlists)
+    );
+
+    console.log(playlists);
+
+}
+
+
+function addLink(){
+
+    let playlist = {
+        name: "My Chill Songs",
+        url: "https://open.spotify.com/playlist/demo"
+    };
+
+    addPlaylistLink(playlist);
+
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flipkart Cart</title>
+</head>
+<body>
+
+  <h2>Flipkart Shopping Cart</h2>
+
+  <p>Open the browser console to see product details.</p>
+
+  <script>
+    const cart = [
+      {
+        productName: "Wireless Headphones",
+        price: 1500,
+        quantity: 2
+      },
+      {
+        productName: "Smart Watch",
+        price: 2500,
+        quantity: 1
+      },
+      {
+        productName: "Mobile Phone",
+        price: 12000,
+        quantity: 1
+      },
+      {
+        productName: "Bluetooth Speaker",
+        price: 2000,
+        quantity: 3
+      }
+    ];
+
+    // Display product name and total price
+    for (let i = 0; i < cart.length; i++) {
+      let totalPrice = cart[i].price * cart[i].quantity;
+
+      console.log(
+        "Product: " + cart[i].productName +
+        ", Total Price: ₹" + totalPrice
+      );
+    }
+  </script>
+
+</body>
+</html>

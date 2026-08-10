@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Spotify Add Playlist</title>
+
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        .form-box {
+            width: 300px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+
+        input, textarea, button {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+        }
+
+        button {
+            background-color: green;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .error {
+            color: red;
+            font-size: 14px;
+        }
+
+        .success {
+            color: green;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+
+<h2>Spotify Create Playlist</h2>
+
+
+<div class="form-box">
+
+
+    <input 
+        type="text" 
+        id="playlistName"
+        placeholder="Playlist Name"
+    >
+
+    <p id="nameError" class="error"></p>
+
+
+
+    <textarea 
+        id="description"
+        placeholder="Playlist Description">
+    </textarea>
+
+    <p id="descriptionError" class="error"></p>
+
+
+
+    <button onclick="createPlaylist()">
+        Create Playlist
+    </button>
+
+
+    <p id="message"></p>
+
+
+</div>
+
+
+
+<script>
+
+
+function createPlaylist(){
+
+
+    let name = document.getElementById("playlistName").value;
+
+    let description = document.getElementById("description").value;
+
+
+
+    let nameError = document.getElementById("nameError");
+
+    let descriptionError = document.getElementById("descriptionError");
+
+    let message = document.getElementById("message");
+
+
+
+    // Clear old messages
+
+    nameError.innerHTML = "";
+
+    descriptionError.innerHTML = "";
+
+    message.innerHTML = "";
+
+
+
+    let isValid = true;
+
+
+
+    // Check playlist name
+
+    if(name.trim() === ""){
+
+        nameError.innerHTML = "Playlist name is required";
+
+        isValid = false;
+
+    }
+
+
+
+    // Check description
+
+    if(description.trim() === ""){
+
+        descriptionError.innerHTML = "Playlist description is required";
+
+        isValid = false;
+
+    }
+
+
+
+    // Success message
+
+    if(isValid){
+
+        message.innerHTML = "Playlist created successfully!";
+
+        message.className = "success";
+
+
+        console.log({
+
+            playlistName: name,
+
+            description: description
+
+        });
+
+    }
+
+
+}
+
+
+</script>
+
+
+</body>
+</html>

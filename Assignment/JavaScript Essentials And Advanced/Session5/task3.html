@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discounted Price Calculator</title>
+</head>
+<body>
+
+    <h2>Flipkart Discount Calculator</h2>
+
+    <script>
+        // Function Expression
+        const getDiscountedPrice = function(price, discountPercent) {
+            return price - (price * discountPercent / 100);
+        };
+
+        // Test the function
+        console.log("Original Price: ₹5000");
+        console.log("Discount: 20%");
+        console.log("Final Price: ₹" + getDiscountedPrice(5000, 20));
+
+        console.log("Original Price: ₹1200");
+        console.log("Discount: 10%");
+        console.log("Final Price: ₹" + getDiscountedPrice(1200, 10));
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flipkart Wishlist</title>
+
+    <style>
+        .product-card {
+            width: 250px;
+            padding: 15px;
+            margin: 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+
+        button {
+            padding: 8px 12px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        .remove {
+            background-color: red;
+            color: white;
+            border: none;
+        }
+
+        .add {
+            background-color: green;
+            color: white;
+            border: none;
+        }
+    </style>
+
+</head>
+<body>
+
+    <h2>Flipkart Wishlist</h2>
+
+    <button id="addProduct" class="add">Add Product</button>
+
+    <div id="wishlist">
+
+        <div class="product-card">
+            <h3>iPhone 15</h3>
+            <p>Price: ₹70000</p>
+            <button class="remove">Remove</button>
+        </div>
+
+        <div class="product-card">
+            <h3>Samsung Galaxy S24</h3>
+            <p>Price: ₹60000</p>
+            <button class="remove">Remove</button>
+        </div>
+
+    </div>
+
+
+    <script>
+
+        let wishlist = document.getElementById("wishlist");
+        let addProduct = document.getElementById("addProduct");
+
+
+        let count = 1;
+
+
+        // Add new product dynamically
+        addProduct.addEventListener("click", function() {
+
+            let card = document.createElement("div");
+
+            card.className = "product-card";
+
+            card.innerHTML = `
+                <h3>New Product ${count}</h3>
+                <p>Price: ₹${1000 * count}</p>
+                <button class="remove">Remove</button>
+            `;
+
+            wishlist.appendChild(card);
+
+            count++;
+
+        });
+
+
+        // Event Delegation for remove buttons
+        wishlist.addEventListener("click", function(event) {
+
+            // Check if clicked element is Remove button
+            if(event.target.classList.contains("remove")) {
+
+                // Remove only clicked product card
+                event.target.parentElement.remove();
+
+            }
+
+        });
+
+    </script>
+
+</body>
+</html>

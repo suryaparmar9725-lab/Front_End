@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shopping Cart Console Messages</title>
+</head>
+
+<body>
+
+    <h2>Shopping Cart System</h2>
+
+    <p>Open Browser Console (F12) to see messages.</p>
+
+
+    <script>
+
+        // Function to add product to cart
+        function addToCart(productName, quantity) {
+
+            // Error if quantity is negative
+            if (quantity < 0) {
+
+                console.error(
+                    `❌ Error: Cannot add ${productName}. Quantity cannot be negative.`
+                );
+
+            }
+
+            // Warning if quantity is zero
+            else if (quantity === 0) {
+
+                console.warn(
+                    `⚠️ Warning: ${productName} quantity is zero.`
+                );
+
+            }
+
+            // Success message
+            else {
+
+                console.log(
+                    `✅ Success: ${quantity} ${productName} added to cart.`
+                );
+
+            }
+
+        }
+
+
+        // Three different scenarios
+
+        // Success case
+        addToCart("iPhone 15", 2);
+
+
+        // Warning case
+        addToCart("Laptop", 0);
+
+
+        // Error case
+        addToCart("Headphones", -1);
+
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Error Object Handling</title>
+</head>
+
+<body>
+
+    <h2>Format Followers</h2>
+
+    <script>
+
+        function formatFollowers(count) {
+
+            try {
+
+                if (count < 0) {
+                    throw new Error("Negative count");
+                }
+
+                return count + " followers";
+
+            } 
+            catch(e) {
+
+                return e.message;
+
+            }
+
+        }
+
+
+        // Test function
+        console.log(formatFollowers(500));
+
+        console.log(formatFollowers(-10));
+
+    </script>
+
+</body>
+</html>

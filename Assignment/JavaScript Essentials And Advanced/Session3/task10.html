@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Order Check</title>
+</head>
+<body>
+
+    <h2>Can Order Food?</h2>
+
+    <script>
+        // Function to check if a user can order food
+        function canOrderFood(isLoggedIn, hasPaymentMethod) {
+            return isLoggedIn && hasPaymentMethod;
+        }
+
+        // Test all possible combinations
+        console.log("true, true  :", canOrderFood(true, true));
+        console.log("true, false :", canOrderFood(true, false));
+        console.log("false, true :", canOrderFood(false, true));
+        console.log("false, false:", canOrderFood(false, false));
+    </script>
+
+</body>
+</html>

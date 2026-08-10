@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Debug Add To Cart</title>
+</head>
+
+<body>
+
+    <h2>Cart Debugging Example</h2>
+
+    <button onclick="testCart()">Add Item</button>
+
+    <p>
+        Open DevTools → Sources tab → Set breakpoint before the error line.
+    </p>
+
+
+    <script>
+
+        function addToCart(item, quantity) {
+
+            console.log("Item:", item);
+            console.log("Quantity:", quantity);
+
+
+            if (quantity === 0) {
+
+                // Set breakpoint on this line in Sources tab
+                throw new Error("Quantity cannot be zero!");
+
+            }
+
+
+            console.log(`${quantity} ${item} added to cart successfully.`);
+
+        }
+
+
+        function testCart() {
+
+            // Calling function with quantity 0
+            addToCart("iPhone 15", 0);
+
+        }
+
+
+    </script>
+
+</body>
+</html>

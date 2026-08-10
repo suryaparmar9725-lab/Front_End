@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Call Stack Debugging</title>
+</head>
+
+<body>
+
+    <h2>Order Processing Debug</h2>
+
+    <p>
+        Open Chrome DevTools → Console tab → Expand the error to view the stack trace.
+    </p>
+
+
+    <script>
+
+        function placeOrder() {
+            confirmOrder();
+        }
+
+
+        function confirmOrder() {
+            processPayment();
+        }
+
+
+        function processPayment() {
+
+            // Error occurs here
+            throw new Error("Payment failed");
+
+        }
+
+
+        // Start order process
+        placeOrder();
+
+
+    </script>
+
+</body>
+</html>

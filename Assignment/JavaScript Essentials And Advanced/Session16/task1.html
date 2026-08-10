@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flipkart Products Filter</title>
+</head>
+<body>
+
+    <h2>Flipkart In Stock Products</h2>
+
+    <div id="productList"></div>
+
+    <script>
+
+        // Array of Flipkart products
+        let products = [
+            {
+                name: "iPhone 15",
+                price: 70000,
+                isInStock: true
+            },
+            {
+                name: "Samsung Galaxy S24",
+                price: 60000,
+                isInStock: false
+            },
+            {
+                name: "Laptop HP",
+                price: 55000,
+                isInStock: true
+            },
+            {
+                name: "Boat Earbuds",
+                price: 2000,
+                isInStock: false
+            },
+            {
+                name: "Smart Watch",
+                price: 5000,
+                isInStock: true
+            }
+        ];
+
+
+        // Filter only products that are in stock
+        let inStockProducts = products.filter(function(product) {
+            return product.isInStock === true;
+        });
+
+
+        // Display products in HTML
+        let output = "";
+
+        inStockProducts.forEach(function(product) {
+            output += `
+                <div>
+                    <h3>${product.name}</h3>
+                    <p>Price: ₹${product.price}</p>
+                    <p>Status: Available</p>
+                    <hr>
+                </div>
+            `;
+        });
+
+
+        document.getElementById("productList").innerHTML = output;
+
+        // Console output
+        console.log(inStockProducts);
+
+    </script>
+
+</body>
+</html>

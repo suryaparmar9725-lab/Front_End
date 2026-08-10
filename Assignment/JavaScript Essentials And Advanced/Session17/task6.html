@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dynamic Flipkart Cart</title>
+
+    <style>
+        .cart {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .card {
+            width: 220px;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .remove {
+            position: absolute;
+            top: 5px;
+            right: 10px;
+            color: red;
+            font-size: 20px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        button {
+            padding: 10px 15px;
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+<body>
+
+    <h2>Flipkart Shopping Cart</h2>
+
+    <button id="addProduct">Add Random Product</button>
+
+
+    <div id="cartContainer" class="cart">
+
+        <div class="card">
+            <span class="remove">✖</span>
+            <h3>iPhone 15</h3>
+            <p>Price: ₹70000</p>
+        </div>
+
+        <div class="card">
+            <span class="remove">✖</span>
+            <h3>Samsung Galaxy S24</h3>
+            <p>Price: ₹60000</p>
+        </div>
+
+    </div>
+
+
+    <script>
+
+        let cartContainer = document.getElementById("cartContainer");
+        let addProduct = document.getElementById("addProduct");
+
+
+        let products = [
+            {
+                name: "Laptop HP",
+                price: 55000
+            },
+            {
+                name: "Boat Earbuds",
+                price: 2000
+            },
+            {
+                name: "Smart Watch",
+                price: 5000
+            },
+            {
+                name: "Tablet",
+                price: 25000
+            }
+        ];
+
+
+        // Add new product dynamically
+        addProduct.addEventListener("click", function() {
+
+            let randomProduct = products[
+                Math.floor(Math.random() * products.length)
+            ];
+
+
+            let card = document.createElement("div");
+
+            card.className = "card";
+
+            card.innerHTML = `
+                <span class="remove">✖</span>
+                <h3>${randomProduct.name}</h3>
+                <p>Price: ₹${randomProduct.price}</p>
+            `;
+
+
+            cartContainer.appendChild(card);
+
+        });
+
+
+
+        // Single event listener for all remove buttons
+        cartContainer.addEventListener("click", function(event) {
+
+
+            if(event.target.classList.contains("remove")) {
+
+
+                // Remove clicked product card
+                event.target.closest(".card").remove();
+
+            }
+
+        });
+
+
+    </script>
+
+</body>
+</html>

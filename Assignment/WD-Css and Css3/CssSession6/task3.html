@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Music App Sign-Up Form</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .signup-form {
+            width: 350px;
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        h2 {
+            text-align: center;
+            color: #1db954;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-top: 12px;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;   /* Matching border-radius */
+            box-sizing: border-box;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Focus effect */
+        input:focus,
+        select:focus {
+            outline: 2px solid #1db954;
+            border-color: #1db954;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 20px;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;   /* Matching border-radius */
+            background-color: #1db954;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(29, 185, 84, 0.4);
+        }
+
+        button:hover {
+            background-color: #169c46;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form class="signup-form">
+        <h2>Music App Sign Up</h2>
+
+        <label for="username">Username</label>
+        <input type="text" id="username" placeholder="Enter your username">
+
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Enter your email">
+
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter your password">
+
+        <label for="genre">Favorite Genre</label>
+        <select id="genre">
+            <option>Pop</option>
+            <option>Rock</option>
+            <option>Hip-Hop</option>
+            <option>Classical</option>
+            <option>Jazz</option>
+        </select>
+
+        <button type="submit">Sign Up</button>
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Console Error Explanation</title>
+</head>
+
+<body>
+
+    <h2>JSON Parse Error Example</h2>
+
+    <button onclick="fetchUser()">Run Error Code</button>
+
+    <p>
+        Open Browser Console (F12 → Console) to see the error.
+    </p>
+
+
+    <script>
+
+        function fetchUser() {
+
+            // Buggy code: undefined is not valid JSON
+            let user = JSON.parse(undefined);
+
+            console.log(user);
+
+        }
+
+
+        // Fixed version
+        function fixedFetchUser() {
+
+            let userData = '{"name":"Rahul","age":25}';
+
+            let user = JSON.parse(userData);
+
+            console.log("Fixed Data:", user);
+
+        }
+
+
+        // Run fixed code
+        fixedFetchUser();
+
+    </script>
+
+</body>
+</html>

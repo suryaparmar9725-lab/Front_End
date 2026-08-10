@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fetch POST Request</title>
+</head>
+
+<body>
+
+  <h1>POST Request Example</h1>
+
+  <script>
+    fetch("https://jsonplaceholder.typicode.com/posts", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        title: "My New Post",
+        body: "This is my custom post content."
+      })
+    })
+      .then(response => response.json())
+      .then(data => {
+        console.log("Response Object:", data);
+
+        if (data.id) {
+          console.log("ID is present:", data.id);
+        } else {
+          console.log("ID is not present");
+        }
+      })
+      .catch(error => {
+        console.log("Error:", error);
+      });
+  </script>
+
+</body>
+</html>

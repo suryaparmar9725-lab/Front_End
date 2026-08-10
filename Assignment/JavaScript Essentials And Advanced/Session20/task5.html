@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>React App Testing Checklist Demo</title>
+
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        .form-box {
+            width: 300px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+
+        input, button {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+        }
+
+        button {
+            cursor: pointer;
+            background-color: blue;
+            color: white;
+            border: none;
+        }
+
+        .card {
+            width: 300px;
+            padding: 15px;
+            margin-top: 15px;
+            border: 1px solid gray;
+            border-radius: 10px;
+        }
+
+        .delete {
+            background-color: red;
+        }
+
+        .edit {
+            background-color: orange;
+        }
+
+        .error {
+            color: red;
+        }
+
+        .success {
+            color: green;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+
+<h2>Product Management Testing</h2>
+
+
+<!-- Add Product Form -->
+
+<div class="form-box">
+
+    <input 
+        type="text" 
+        id="productName"
+        placeholder="Enter Product Name"
+    >
+
+
+    <input 
+        type="number"
+        id="productPrice"
+        placeholder="Enter Price"
+    >
+
+
+    <button onclick="addProduct()">
+        Add Product
+    </button>
+
+
+    <p id="error" class="error"></p>
+
+    <p id="success" class="success"></p>
+
+</div>
+
+
+
+<h2>Product List</h2>
+
+
+<div id="productList"></div>
+
+
+
+<script>
+
+
+// Product Array
+
+let products = [];
+
+
+
+
+// Add Product Function
+
+function addProduct(){
+
+
+    let name = document.getElementById("productName").value;
+
+    let price = document.getElementById("productPrice").value;
+
+
+
+    document.getElementById("error").innerHTML = "";
+
+
+
+    // Bug Fix 1: Empty field validation
+
+    if(name.trim() === "" || price === ""){
+
+
+        document.getElementById("error").innerHTML =
+        "Please fill all fields";
+
+
+        return;
+
+    }
+
+
+
+
+    // Bug Fix 2: Prevent duplicate add
+
+    let exists = products.find(function(item){
+
+        return item.name === name;
+
+    });
+
+
+
+    if(exists){
+
+
+        document.getElementById("error").innerHTML =
+        "Product already exists";
+
+
+        return;
+
+    }
+
+
+
+
+    let product = {
+
+        id: Date.now(),
+
+        name:name,
+
+        price:price
+
+    };
+
+
+
+    products.push(product);
+
+
+
+    displayProducts();
+
+
+
+    document.getElementById("success").innerHTML =
+    "Product Added Successfully";
+
+
+
+    clearForm();
+
+
+}
+
+
+
+
+// Display Products
+
+function displayProducts(){
+
+
+    let output = "";
+
+
+
+    products.forEach(function(item){
+
+
+        output += `
+
+
+        <div class="card">
+
+
+            <h3>${item.name}</h3>
+
+
+            <p>Price: ₹${item.price}</p>
+
+
+
+            <button 
+            class="edit"
+            onclick="editProduct(${item.id})">
+
+                Edit
+
+            </button>
+
+
+
+            <button 
+            class="delete"
+            onclick="deleteProduct(${item.id})">
+
+                Delete
+
+            </button>
+
+
+        </div>
+
+
+        `;
+
+
+    });
+
+
+
+    document.getElementById("productList").innerHTML = output;
+
+
+}
+
+
+
+
+
+// Edit Function
+
+function editProduct(id){
+
+
+    let product = products.find(function(item){
+
+        return item.id === id;
+
+    });
+
+
+
+    let newName = prompt(
+        "Enter new name",
+        product.name
+    );
+
+
+    let newPrice = prompt(
+        "Enter new price",
+        product.price
+    );
+
+
+
+    product.name = newName;
+
+    product.price = newPrice;
+
+
+
+    displayProducts();
+
+
+}
+
+
+
+
+
+// Delete Function
+
+function deleteProduct(id){
+
+
+    products = products.filter(function(item){
+
+        return item.id !== id;
+
+    });
+
+
+
+    displayProducts();
+
+
+}
+
+
+
+
+
+// Clear Input Fields
+
+function clearForm(){
+
+
+    document.getElementById("productName").value = "";
+
+    document.getElementById("productPrice").value = "";
+
+
+}
+
+
+
+</script>
+
+
+</body>
+</html>

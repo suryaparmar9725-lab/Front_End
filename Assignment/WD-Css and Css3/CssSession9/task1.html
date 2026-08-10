@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookMyShow - Bounce Button</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .hero {
+            text-align: center;
+        }
+
+        h1 {
+            color: #d81f26;
+            margin-bottom: 20px;
+        }
+
+        /* Book Now Button */
+        .book-btn {
+            background-color: #d81f26;
+            color: white;
+            border: none;
+            padding: 15px 35px;
+            font-size: 18px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        /* Bounce Animation on Hover */
+        .book-btn:hover {
+            animation: bounce-top 3s both;
+        }
+
+        /* Animista Bounce Animation */
+        @keyframes bounce-top {
+            0% {
+                transform: translateY(-10px);
+                animation-timing-function: ease-in;
+                opacity: 1;
+            }
+
+            24% {
+                opacity: 1;
+            }
+
+            40% {
+                transform: translateY(-24px);
+                animation-timing-function: ease-in;
+            }
+
+            65% {
+                transform: translateY(-12px);
+                animation-timing-function: ease-in;
+            }
+
+            82% {
+                transform: translateY(-6px);
+                animation-timing-function: ease-in;
+            }
+
+            93% {
+                transform: translateY(-4px);
+                animation-timing-function: ease-in;
+            }
+
+            25%,
+            55%,
+            75%,
+            87% {
+                transform: translateY(0);
+                animation-timing-function: ease-out;
+            }
+
+            100% {
+                transform: translateY(0);
+                animation-timing-function: ease-out;
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="hero">
+        <h1>🎬 BookMyShow</h1>
+        <p>Book your favorite movie tickets online.</p>
+
+        <button class="book-btn">
+            Book Now
+        </button>
+    </div>
+
+</body>
+</html>

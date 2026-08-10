@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Get Recent Searches</title>
+</head>
+
+<body>
+
+    <h2>Recent Searches</h2>
+    <div id="searchList"></div>
+
+
+    <script>
+
+        // Function to get recent searches from localStorage
+        function getRecentSearches() {
+
+            // Get data from localStorage
+            const savedSearches = localStorage.getItem("recentSearches");
+
+
+            // Check if data exists before parsing
+            if (savedSearches === null) {
+                return [];
+            }
+
+
+            // Convert JSON string back to array
+            return JSON.parse(savedSearches);
+
+        }
+
+
+        // Example usage
+        const recentSearches = getRecentSearches();
+
+
+        // Print array in console
+        console.log(recentSearches);
+
+
+        // Display on webpage
+        document.getElementById("searchList").innerHTML =
+            recentSearches.length > 0 
+            ? recentSearches.join("<br>")
+            : "No recent searches found";
+
+
+    </script>
+
+</body>
+</html>

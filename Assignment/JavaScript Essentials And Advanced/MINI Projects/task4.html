@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Edit Playlist Link</title>
+</head>
+
+<body>
+
+<h2>Edit Playlist</h2>
+
+<button onclick="editLink()">Update Playlist</button>
+
+
+<script>
+
+
+let myPlaylists = JSON.parse(
+    localStorage.getItem("myPlaylists")
+) || [];
+
+
+
+// Edit Playlist Function
+
+function editPlaylistLink(index, newLinkObj){
+
+
+    myPlaylists[index] = newLinkObj;
+
+
+    localStorage.setItem(
+        "myPlaylists",
+        JSON.stringify(myPlaylists)
+    );
+
+
+    console.log(myPlaylists);
+
+}
+
+
+
+// Test Function
+
+function editLink(){
+
+
+    let updatedPlaylist = {
+
+        name: "Updated Chill Songs",
+
+        url: "https://open.spotify.com/updated"
+
+    };
+
+
+    editPlaylistLink(0, updatedPlaylist);
+
+
+}
+
+
+</script>
+
+
+</body>
+</html>

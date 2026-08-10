@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Orders Total Price</title>
+</head>
+<body>
+
+    <h2>Order Details</h2>
+    <div id="orderList"></div>
+
+    <script>
+        // Array of orders
+        const orders = [
+            {
+                orderId: 101,
+                items: [
+                    { itemName: "Laptop", price: 50000 },
+                    { itemName: "Mouse", price: 1000 }
+                ],
+                delivery: {
+                    address: "Ahmedabad",
+                    status: "Delivered"
+                }
+            },
+            {
+                orderId: 102,
+                items: [
+                    { itemName: "Mobile", price: 20000 },
+                    { itemName: "Cover", price: 500 },
+                    { itemName: "Charger", price: 1500 }
+                ],
+                delivery: {
+                    address: "Surat",
+                    status: "Pending"
+                }
+            },
+            {
+                orderId: 103,
+                items: [
+                    { itemName: "Keyboard", price: 2000 },
+                    { itemName: "Headphone", price: 3000 }
+                ],
+                delivery: {
+                    address: "Rajkot",
+                    status: "Shipped"
+                }
+            }
+        ];
+
+
+        let output = "";
+
+        // Loop through orders
+        orders.forEach(order => {
+
+            let totalPrice = 0;
+
+            // Nested loop to calculate total price
+            order.items.forEach(item => {
+                totalPrice += item.price;
+            });
+
+            output += `
+                <h3>Order ID: ${order.orderId}</h3>
+                <p>Total Price: ₹${totalPrice}</p>
+                <p>Delivery Address: ${order.delivery.address}</p>
+                <p>Status: ${order.delivery.status}</p>
+                <hr>
+            `;
+        });
+
+
+        // Display result in HTML
+        document.getElementById("orderList").innerHTML = output;
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+/*
+The text inside the Profile Card appears blue because the
+.profile-card class selector is more specific than the body
+selector. Although the body color is inherited by all elements,
+the class selector overrides the inherited color for the
+Profile Card and its child elements.
+*/
+
+body {
+    font-family: Arial, sans-serif;
+    color: black; /* Default text color for the whole page */
+    background-color: #f5f5f5;
+}
+
+/* Profile Card */
+.profile-card {
+    color: blue; /* Overrides the inherited body color */
+    background-color: #d4f5d4;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+/* Playlist */
+.playlist {
+    background-color: #d6eaff;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+/* Trending Hashtags */
+.hashtags {
+    background-color: #ffe5b4;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+}

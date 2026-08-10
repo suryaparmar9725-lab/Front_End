@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Spotify Button</title>
+</head>
+<body>
+
+    <h2>Spotify Button Generator</h2>
+
+    <script>
+        // Function declaration
+        function createSpotifyButton(label, color) {
+            let button = document.createElement("button");
+
+            button.textContent = label;
+            button.style.backgroundColor = color;
+            button.style.color = "white";
+            button.style.padding = "10px 20px";
+            button.style.border = "none";
+            button.style.borderRadius = "5px";
+            button.style.cursor = "pointer";
+            button.style.margin = "10px";
+
+            return button;
+        }
+
+        // Create and display the button
+        let spotifyButton = createSpotifyButton("Play on Spotify", "green");
+        document.body.appendChild(spotifyButton);
+    </script>
+
+</body>
+</html>

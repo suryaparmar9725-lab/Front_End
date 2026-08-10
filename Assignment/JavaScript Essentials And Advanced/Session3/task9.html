@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Truthy and Falsy Checker</title>
+</head>
+<body>
+
+    <h2>Truthy and Falsy Checker</h2>
+
+    <script>
+        // Function using the ternary operator
+        function isTruthy(input) {
+            return input ? "Truthy" : "Falsy";
+        }
+
+        // Test the function
+        console.log("'' :", isTruthy(""));
+        console.log("0 :", isTruthy(0));
+        console.log("null :", isTruthy(null));
+        console.log("'hello' :", isTruthy("hello"));
+        console.log("42 :", isTruthy(42));
+    </script>
+
+</body>
+</html>

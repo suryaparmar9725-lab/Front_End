@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flipkart Product Class</title>
+</head>
+
+<body>
+
+    <h2>Flipkart Product Discount</h2>
+
+    <script>
+
+        // Create FlipkartProduct class
+        class FlipkartProduct {
+
+            constructor(title, price, rating) {
+
+                this.title = title;
+                this.price = price;
+                this.rating = rating;
+
+            }
+
+
+            // Method to calculate discounted price
+            getDiscountedPrice(discountPercent) {
+
+                return this.price - 
+                (this.price * discountPercent / 100);
+
+            }
+
+        }
+
+
+        // Create product instance
+        const product = new FlipkartProduct(
+            "Wireless Headphones",
+            2000,
+            4.5
+        );
+
+
+        // Apply 20% discount
+        const finalPrice = product.getDiscountedPrice(20);
+
+
+        // Display product details
+        console.log("Product:", product.title);
+        console.log("Original Price: ₹" + product.price);
+        console.log("Rating:", product.rating);
+        console.log("Discounted Price: ₹" + finalPrice);
+
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>YouTube Video Finder</title>
+</head>
+<body>
+
+    <h2>Popular YouTube Video</h2>
+
+    <div id="videoResult"></div>
+
+    <script>
+
+        // Array of YouTube video objects
+        let videos = [
+            {
+                title: "JavaScript Tutorial",
+                views: 500000
+            },
+            {
+                title: "React JS Full Course",
+                views: 1500000
+            },
+            {
+                title: "HTML CSS Project",
+                views: 800000
+            },
+            {
+                title: "Web Development Roadmap",
+                views: 2500000
+            }
+        ];
+
+
+        // Using find() to get first video with more than 1 million views
+        let popularVideo = videos.find(function(video) {
+            return video.views > 1000000;
+        });
+
+
+        // Display result
+        document.getElementById("videoResult").innerHTML = `
+            <h3>Video Title: ${popularVideo.title}</h3>
+            <p>Views: ${popularVideo.views}</p>
+        `;
+
+
+        // Show result in console
+        console.log(popularVideo);
+
+    </script>
+
+</body>
+</html>

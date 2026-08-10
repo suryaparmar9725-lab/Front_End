@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music App Sign-Up Form</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #121212;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .signup-form {
+            width: 350px;
+            background: #ffffff;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        }
+
+        h2 {
+            text-align: center;
+            color: #1DB954;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-top: 12px;
+            font-weight: bold;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-sizing: border-box;
+            outline: none;
+        }
+
+        input:focus,
+        select:focus {
+            border-color: #1DB954;
+            box-shadow: 0 0 5px rgba(29,185,84,0.5);
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            background-color: #1DB954;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(29,185,84,0.4);
+
+            /* Smooth animation */
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        /* Hover Effect */
+        button:hover {
+            background-color: #169C46;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+    <form class="signup-form">
+        <h2>Music App Sign Up</h2>
+
+        <label>Username</label>
+        <input type="text" placeholder="Enter username">
+
+        <label>Email</label>
+        <input type="email" placeholder="Enter email">
+
+        <label>Password</label>
+        <input type="password" placeholder="Enter password">
+
+        <label>Favorite Genre</label>
+        <select>
+            <option>Pop</option>
+            <option>Rock</option>
+            <option>Hip-Hop</option>
+            <option>Jazz</option>
+            <option>Classical</option>
+        </select>
+
+        <button type="submit">Sign Up</button>
+    </form>
+
+</body>
+</html>

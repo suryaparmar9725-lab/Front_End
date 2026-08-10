@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Playlist Splice Example</title>
+</head>
+<body>
+
+  <h2>Spotify Playlist Update</h2>
+
+  <p>Open the browser console to see the updated array.</p>
+
+  <script>
+    const playlists = [
+      {
+        name: "Top Bollywood Hits",
+        creator: "Spotify Music",
+        numberOfSongs: 50
+      },
+      {
+        name: "Workout Energy",
+        creator: "DJ Beats",
+        numberOfSongs: 35
+      },
+      {
+        name: "Chill Vibes",
+        creator: "Arijit Singh",
+        numberOfSongs: 40
+      }
+    ];
+
+    // Remove second playlist and add new playlist at same position
+    playlists.splice(1, 1, {
+      name: "Morning Motivation",
+      creator: "Imagine Dragons",
+      numberOfSongs: 25
+    });
+
+    // Print updated array
+    console.log(playlists);
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flipkart Wishlist Manager</title>
+
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        .form-box {
+            width: 300px;
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        input, button {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+        }
+
+        button {
+            cursor: pointer;
+        }
+
+        .add-btn {
+            background-color: green;
+            color: white;
+            border: none;
+        }
+
+        .wishlist {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .card {
+            width: 220px;
+            border: 1px solid #ccc;
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        .edit {
+            background-color: orange;
+            color: white;
+            border: none;
+        }
+
+        .delete {
+            background-color: red;
+            color: white;
+            border: none;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+
+<h2>Flipkart Wishlist Manager</h2>
+
+
+<!-- Add Item Form -->
+
+<div class="form-box">
+
+    <h3>Add Product</h3>
+
+    <input 
+        type="text" 
+        id="productName" 
+        placeholder="Product Name"
+    >
+
+    <input 
+        type="number" 
+        id="productPrice" 
+        placeholder="Product Price"
+    >
+
+    <button class="add-btn" onclick="addProduct()">
+        Add Item
+    </button>
+
+</div>
+
+
+
+<!-- Display Wishlist -->
+
+<h3>Wishlist Products</h3>
+
+<div id="wishlist" class="wishlist"></div>
+
+
+
+<script>
+
+
+// Storage Array
+
+let wishlist = [];
+
+
+// Add Product
+
+function addProduct(){
+
+    let name = document.getElementById("productName").value;
+
+    let price = document.getElementById("productPrice").value;
+
+
+    let product = {
+
+        id: Date.now(),
+
+        name:name,
+
+        price:price
+
+    };
+
+
+    // Store data
+
+    wishlist.push(product);
+
+
+    displayProducts();
+
+
+}
+
+
+
+// Display Products
+
+function displayProducts(){
+
+    let output = "";
+
+
+    wishlist.forEach(function(item){
+
+
+        output += `
+
+        <div class="card">
+
+            <h3>${item.name}</h3>
+
+            <p>Price: ₹${item.price}</p>
+
+
+            <button class="edit" onclick="editProduct(${item.id})">
+                Edit
+            </button>
+
+
+            <button class="delete" onclick="deleteProduct(${item.id})">
+                Delete
+            </button>
+
+        </div>
+
+        `;
+
+
+    });
+
+
+    document.getElementById("wishlist").innerHTML = output;
+
+}
+
+
+
+// Edit Product
+
+function editProduct(id){
+
+
+    let product = wishlist.find(item => item.id === id);
+
+
+    let newName = prompt(
+        "Enter new product name",
+        product.name
+    );
+
+
+    product.name = newName;
+
+
+    displayProducts();
+
+
+}
+
+
+
+// Delete Product
+
+function deleteProduct(id){
+
+
+    wishlist = wishlist.filter(function(item){
+
+        return item.id !== id;
+
+    });
+
+
+    displayProducts();
+
+
+}
+
+
+</script>
+
+
+</body>
+</html>

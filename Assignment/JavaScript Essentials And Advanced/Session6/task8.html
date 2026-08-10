@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Now Playing</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .player {
+      padding: 20px;
+      border: 2px solid #333;
+      width: 300px;
+      margin: auto;
+      border-radius: 10px;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="player">
+    <h2>🎵 Now Playing</h2>
+
+    <p>
+      Song: <span id="song-title">Shape of You</span>
+    </p>
+
+    <button id="changeSong">Change Song</button>
+  </div>
+
+  <script>
+    const songs = [
+      "Shape of You",
+      "Believer",
+      "Perfect",
+      "Blinding Lights",
+      "Counting Stars"
+    ];
+
+    const songTitle = document.getElementById("song-title");
+    const button = document.getElementById("changeSong");
+
+    let index = 0;
+
+    button.addEventListener("click", function () {
+      index = (index + 1) % songs.length;
+      songTitle.innerHTML = songs[index];
+    });
+  </script>
+
+</body>
+</html>

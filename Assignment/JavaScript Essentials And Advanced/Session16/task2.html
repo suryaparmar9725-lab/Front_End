@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Spotify Public Playlists</title>
+</head>
+<body>
+
+    <h2>Public Spotify Playlists</h2>
+
+    <div id="playlistList"></div>
+
+    <script>
+
+        // Array of Spotify playlists
+        let playlists = [
+            {
+                name: "Top Bollywood Hits",
+                isPublic: true
+            },
+            {
+                name: "My Personal Songs",
+                isPublic: false
+            },
+            {
+                name: "Workout Music",
+                isPublic: true
+            },
+            {
+                name: "Private Chill Playlist",
+                isPublic: false
+            },
+            {
+                name: "English Pop Songs",
+                isPublic: true
+            }
+        ];
+
+
+        // Filter only public playlists
+        let publicPlaylists = playlists.filter(function(playlist) {
+            return playlist.isPublic === true;
+        });
+
+
+        // Display public playlists
+        let output = "";
+
+        publicPlaylists.forEach(function(playlist) {
+            output += `
+                <div>
+                    <h3>${playlist.name}</h3>
+                    <p>Status: Public Playlist</p>
+                    <hr>
+                </div>
+            `;
+        });
+
+
+        document.getElementById("playlistList").innerHTML = output;
+
+
+        // Show result in console
+        console.log(publicPlaylists);
+
+    </script>
+
+</body>
+</html>

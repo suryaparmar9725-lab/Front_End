@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Playlist App</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 30px;
+    }
+
+    input {
+      padding: 8px;
+      width: 250px;
+    }
+
+    button {
+      padding: 8px 15px;
+      margin-left: 10px;
+      cursor: pointer;
+    }
+
+    ul {
+      margin-top: 20px;
+    }
+
+    li {
+      padding: 5px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>My Playlist</h2>
+
+  <input type="text" placeholder="Enter song name">
+  <button>Add Song</button>
+
+  <ul id="playlist"></ul>
+
+  <script>
+    const input = document.querySelector("input");
+    const button = document.querySelector("button");
+    const playlist = document.querySelector("#playlist");
+
+    button.addEventListener("click", function () {
+      const songName = input.value.trim();
+
+      if (songName !== "") {
+        const li = document.createElement("li");
+        li.textContent = songName;
+        playlist.appendChild(li);
+
+        input.value = "";
+        input.focus();
+      } else {
+        alert("Please enter a song name.");
+      }
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Zomato Restaurant Finder</title>
+</head>
+<body>
+
+    <h2>Chinese Restaurant on Zomato</h2>
+
+    <div id="restaurantResult"></div>
+
+    <script>
+
+        // Array of Zomato restaurant objects
+        let restaurants = [
+            {
+                name: "Spice Garden",
+                cuisine: "Indian"
+            },
+            {
+                name: "Dragon Palace",
+                cuisine: "Chinese"
+            },
+            {
+                name: "Pizza Hub",
+                cuisine: "Italian"
+            },
+            {
+                name: "Chinese Wok",
+                cuisine: "Chinese"
+            }
+        ];
+
+
+        // Using find() to get first Chinese restaurant
+        let chineseRestaurant = restaurants.find(function(restaurant) {
+            return restaurant.cuisine === "Chinese";
+        });
+
+
+        // Display result
+        document.getElementById("restaurantResult").innerHTML = `
+            <h3>Restaurant Name: ${chineseRestaurant.name}</h3>
+            <p>Cuisine: ${chineseRestaurant.cuisine}</p>
+        `;
+
+
+        // Show result in console
+        console.log(chineseRestaurant);
+
+    </script>
+
+</body>
+</html>

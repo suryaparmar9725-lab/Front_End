@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instagram Like Button</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .post {
+      width: 300px;
+      margin: auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #ff3040;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    #like-count {
+      margin-top: 15px;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="post">
+    <h2>📸 Instagram Post</h2>
+
+    <button id="likeBtn">❤️ Like</button>
+
+    <p id="like-count">Likes:0</p>
+  </div>
+
+  <script>
+    let count = 0;
+
+    const likeButton = document.getElementById("likeBtn");
+    const likeCount = document.getElementById("like-count");
+
+    likeButton.addEventListener("click", function () {
+      count++;
+      likeCount.innerHTML = "Likes: " + count;
+    });
+  </script>
+
+</body>
+</html>

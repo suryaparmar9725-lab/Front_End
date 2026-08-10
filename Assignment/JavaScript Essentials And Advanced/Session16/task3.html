@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Instagram Likes</title>
+</head>
+<body>
+
+    <h2>Instagram Post Likes</h2>
+
+    <div id="likesList"></div>
+
+    <script>
+
+        // Array of Instagram post objects
+        let posts = [
+            {
+                caption: "My Travel Photo",
+                likes: 1200
+            },
+            {
+                caption: "Food Photography",
+                likes: 850
+            },
+            {
+                caption: "Nature View",
+                likes: 2000
+            },
+            {
+                caption: "New Profile Picture",
+                likes: 1500
+            }
+        ];
+
+
+        // Using map() to get only likes count
+        let likeCounts = posts.map(function(post) {
+            return post.likes;
+        });
+
+
+        // Display like counts
+        let output = "";
+
+        likeCounts.forEach(function(likes) {
+            output += `
+                <div>
+                    <h3>${likes} Likes</h3>
+                    <hr>
+                </div>
+            `;
+        });
+
+
+        document.getElementById("likesList").innerHTML = output;
+
+
+        // Show result in console
+        console.log(likeCounts);
+
+    </script>
+
+</body>
+</html>

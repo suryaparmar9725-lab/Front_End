@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flipkart Product Layout Using Float</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        /* Left side product list */
+        .products {
+            float: left;
+            width: 70%;
+            background-color: white;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .product-card {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+
+        .product-card h3 {
+            color: #2874f0;
+        }
+
+        /* Right side cart sidebar */
+        .cart {
+            float: right;
+            width: 25%;
+            background-color: white;
+            padding: 20px;
+            box-sizing: border-box;
+
+            border: 1px solid #ddd;
+        }
+
+        .cart h2 {
+            color: green;
+        }
+
+        .clear {
+            clear: both;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Flipkart Product Page</h1>
+
+
+    <!-- Product List (Float Left) -->
+    <div class="products">
+
+        <h2>Products</h2>
+
+        <div class="product-card">
+            <h3>Smartphone</h3>
+            <p>
+                5G smartphone with high performance processor,
+                powerful camera and long battery life.
+            </p>
+            <b>Price: ₹19,999</b>
+        </div>
+
+
+        <div class="product-card">
+            <h3>Laptop</h3>
+            <p>
+                Lightweight laptop for coding, office work
+                and entertainment.
+            </p>
+            <b>Price: ₹49,999</b>
+        </div>
+
+
+        <div class="product-card">
+            <h3>Headphones</h3>
+            <p>
+                Wireless headphones with noise cancellation
+                and premium sound quality.
+            </p>
+            <b>Price: ₹2,999</b>
+        </div>
+
+    </div>
+
+
+
+    <!-- Cart Sidebar (Float Right) -->
+    <div class="cart">
+
+        <h2>Your Cart</h2>
+
+        <p>Smartphone × 1</p>
+        <p>Laptop × 1</p>
+        <p>Headphones × 1</p>
+
+        <hr>
+
+        <h3>Total: ₹72,997</h3>
+
+        <button>
+            Checkout
+        </button>
+
+    </div>
+
+
+    <!-- Stops floating effect -->
+    <div class="clear"></div>
+
+
+</body>
+</html>

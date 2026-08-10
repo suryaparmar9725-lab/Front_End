@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Spotify Playlist Manager</title>
+
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        .form-box {
+            width: 300px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+
+        input, textarea, button {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+        }
+
+        button {
+            background-color: green;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .playlist-card {
+            width: 300px;
+            padding: 15px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+
+<h2>Spotify Create Playlist</h2>
+
+
+<!-- Playlist Form -->
+
+<div class="form-box">
+
+    <input 
+        type="text" 
+        id="playlistName" 
+        placeholder="Playlist Name"
+    >
+
+
+    <textarea 
+        id="playlistDescription" 
+        placeholder="Playlist Description">
+    </textarea>
+
+
+    <button onclick="addPlaylist()">
+        Create Playlist
+    </button>
+
+</div>
+
+
+
+<h2>My Playlists</h2>
+
+
+<!-- Display Playlist List -->
+
+<div id="playlistList"></div>
+
+
+
+<script>
+
+
+// Array to store playlists
+
+let playlists = [];
+
+
+
+// Add Playlist Function
+
+function addPlaylist(){
+
+
+    let name = document.getElementById("playlistName").value;
+
+    let description = document.getElementById("playlistDescription").value;
+
+
+
+    let playlist = {
+
+        name: name,
+
+        description: description
+
+    };
+
+
+
+    // Store playlist in array
+
+    playlists.push(playlist);
+
+
+
+    // Update display
+
+    displayPlaylists();
+
+
+
+    // Clear input fields
+
+    document.getElementById("playlistName").value = "";
+
+    document.getElementById("playlistDescription").value = "";
+
+
+}
+
+
+
+// Display playlists
+
+function displayPlaylists(){
+
+
+    let output = "";
+
+
+
+    playlists.forEach(function(item){
+
+
+        output += `
+
+        <div class="playlist-card">
+
+            <h3>${item.name}</h3>
+
+            <p>${item.description}</p>
+
+        </div>
+
+        `;
+
+
+    });
+
+
+
+    document.getElementById("playlistList").innerHTML = output;
+
+
+}
+
+
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flipkart Wishlist</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        .product {
+            border: 1px solid gray;
+            padding: 10px;
+            margin: 10px;
+            width: 250px;
+        }
+
+        button {
+            padding: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Flipkart Wishlist</h2>
+
+    <button onclick="clearWishlist()">Clear Wishlist</button>
+
+    <div id="wishlist"></div>
+
+
+    <script>
+
+        // Wishlist products
+        let products = [
+            {
+                name: "iPhone 15",
+                price: 69999
+            },
+            {
+                name: "Boat Headphones",
+                price: 1999
+            },
+            {
+                name: "HP Laptop",
+                price: 55000
+            }
+        ];
+
+
+        // Save wishlist in localStorage
+        localStorage.setItem(
+            "wishlist",
+            JSON.stringify(products)
+        );
+
+
+        // Display wishlist function
+        function displayWishlist() {
+
+            let savedWishlist = localStorage.getItem("wishlist");
+
+            let wishlistBox = document.getElementById("wishlist");
+
+
+            // If wishlist is empty
+            if(savedWishlist === null) {
+
+                wishlistBox.innerHTML = 
+                "<h3>No items in wishlist</h3>";
+
+                return;
+            }
+
+
+            let wishlistItems = JSON.parse(savedWishlist);
+
+            let output = "";
+
+
+            wishlistItems.forEach(product => {
+
+                output += `
+                    <div class="product">
+                        <h3>${product.name}</h3>
+                        <p>Price: ₹${product.price}</p>
+                    </div>
+                `;
+
+            });
+
+
+            wishlistBox.innerHTML = output;
+
+        }
+
+
+        // Clear wishlist function
+        function clearWishlist() {
+
+            // Remove wishlist from localStorage
+            localStorage.removeItem("wishlist");
+
+
+            // Update display immediately
+            displayWishlist();
+
+        }
+
+
+        // Load wishlist on page start
+        displayWishlist();
+
+
+    </script>
+
+</body>
+</html>

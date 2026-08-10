@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Stack Trace Example</title>
+</head>
+
+<body>
+
+    <h2>JavaScript Error Stack Trace</h2>
+
+    <script>
+
+        /*
+        Stack Trace Explanation:
+        The error "Invalid User ID" occurs because the function
+        checkUserId() throws a custom Error when the user ID is
+        invalid. The stack trace shows that the problem happened
+        inside checkUserId() at the line where throw new Error()
+        is written. It also shows the line from where the function
+        was called. This helps developers find and fix errors quickly.
+        */
+
+
+        function checkUserId(id) {
+
+            if (id <= 0) {
+
+                throw new Error("Invalid User ID");
+
+            }
+
+            return "Valid User ID";
+
+        }
+
+
+        try {
+
+            console.log(checkUserId(0));
+
+        }
+        catch(error) {
+
+            console.error(error);
+
+        }
+
+
+    </script>
+
+</body>
+</html>

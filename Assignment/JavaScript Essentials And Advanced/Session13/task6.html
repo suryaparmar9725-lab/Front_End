@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Zomato Order Total</title>
+</head>
+
+<body>
+
+    <h2>Zomato Food Order</h2>
+
+    <script>
+
+        // Function to calculate order total
+        function getOrderTotal(items) {
+
+            let total = 0;
+
+
+            items.forEach(item => {
+
+                // Check for negative price
+                if (item.price < 0) {
+
+                    throw new Error("Invalid item price");
+
+                }
+
+
+                total += item.price;
+
+            });
+
+
+            return total;
+
+        }
+
+
+        // Food order items
+        const orderItems = [
+            {
+                name: "Biryani",
+                price: 250
+            },
+            {
+                name: "Pizza",
+                price: 400
+            },
+            {
+                name: "Cold Drink",
+                price: -50
+            }
+        ];
+
+
+        // Handle error using try...catch
+        try {
+
+            const total = getOrderTotal(orderItems);
+
+            console.log("Total Amount: ₹" + total);
+
+        } 
+        catch(error) {
+
+            console.log("Sorry, your order contains an invalid item price.");
+
+            console.log(error.message);
+
+        }
+
+    </script>
+
+</body>
+</html>

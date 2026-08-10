@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Favorite Apps</title>
+</head>
+<body>
+
+    <h2>Favorite Apps List</h2>
+    <div id="appList"></div>
+
+    <script>
+
+        // Create favApps array
+        const favApps = [
+            {
+                title: "Instagram",
+                url: "https://www.instagram.com"
+            },
+            {
+                title: "YouTube",
+                url: "https://www.youtube.com"
+            },
+            {
+                title: "Facebook",
+                url: "https://www.facebook.com"
+            },
+            {
+                title: "Spotify",
+                url: "https://www.spotify.com"
+            },
+            {
+                title: "Amazon",
+                url: "https://www.amazon.com"
+            }
+        ];
+
+
+        // Remove third app and insert new app at same position
+        favApps.splice(2, 1, {
+            title: "WhatsApp",
+            url: "https://www.whatsapp.com"
+        });
+
+
+        // Print final array in console
+        console.log(favApps);
+
+
+        // Display array on webpage
+        let output = "";
+
+        favApps.forEach(app => {
+            output += `
+                <h3>${app.title}</h3>
+                <p>${app.url}</p>
+                <hr>
+            `;
+        });
+
+        document.getElementById("appList").innerHTML = output;
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flipkart Add to Cart Event</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .product-card {
+      width: 300px;
+      margin: auto;
+      padding: 20px;
+      border: 2px solid #ddd;
+      border-radius: 10px;
+    }
+
+    button {
+      background-color: #2874f0;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    #event-info {
+      margin-top: 20px;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="product-card">
+    <h2>📱 Smartphone</h2>
+    <p>Price: ₹15,999</p>
+
+    <button id="cartBtn">Add to Cart</button>
+  </div>
+
+  <p id="event-info">Interact with the button...</p>
+
+  <script>
+    const cartButton = document.querySelector("#cartBtn");
+    const eventInfo = document.querySelector("#event-info");
+
+    function showEventDetails(event) {
+      console.log("Event Type:", event.type);
+      console.log("X Coordinate:", event.clientX);
+      console.log("Y Coordinate:", event.clientY);
+
+      eventInfo.innerHTML =
+        "Event: " + event.type +
+        "<br>X: " + event.clientX +
+        "<br>Y: " + event.clientY;
+    }
+
+    cartButton.addEventListener("click", showEventDetails);
+    cartButton.addEventListener("mouseover", showEventDetails);
+  </script>
+
+</body>
+</html>

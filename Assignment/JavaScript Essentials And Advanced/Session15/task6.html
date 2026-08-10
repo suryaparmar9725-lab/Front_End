@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flipkart Product Class</title>
+</head>
+
+<body>
+
+    <h2>Flipkart Product Details</h2>
+
+    <script>
+
+        // Create FlipkartProduct class
+        class FlipkartProduct {
+
+            constructor(title, price, rating) {
+
+                this.title = title;
+                this.price = price;
+                this.rating = rating;
+
+            }
+
+
+            // Method to display product details
+            displayDetails() {
+
+                console.log(
+                    `${this.title} - ₹${this.price} - ${this.rating}⭐`
+                );
+
+            }
+
+        }
+
+
+        // Create product instance
+        const product = new FlipkartProduct(
+            "Redmi Note 12 Pro",
+            18999,
+            4.5
+        );
+
+
+        // Call displayDetails method
+        product.displayDetails();
+
+
+    </script>
+
+</body>
+</html>

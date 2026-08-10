@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Zomato Order Clicks</title>
+</head>
+<body>
+
+    <h2>Total Zomato Order Clicks</h2>
+
+    <div id="clickResult"></div>
+
+    <script>
+
+        // Array of Zomato order objects
+        let orders = [
+            {
+                foodName: "Pizza",
+                clicks: 120
+            },
+            {
+                foodName: "Burger",
+                clicks: 200
+            },
+            {
+                foodName: "Pasta",
+                clicks: 150
+            },
+            {
+                foodName: "Biryani",
+                clicks: 300
+            }
+        ];
+
+
+        // Using reduce() to calculate total clicks
+        let totalClicks = orders.reduce(function(accumulator, order) {
+            return accumulator + order.clicks;
+        }, 0);
+
+
+        // Display total clicks
+        document.getElementById("clickResult").innerHTML = `
+            <h3>Total Clicks: ${totalClicks}</h3>
+        `;
+
+
+        // Show result in console
+        console.log("Total Clicks:", totalClicks);
+
+    </script>
+
+</body>
+</html>

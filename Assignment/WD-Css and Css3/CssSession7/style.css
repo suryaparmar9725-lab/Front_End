@@ -1,0 +1,39 @@
+/*
+The playlist section originally has a light blue background.
+However, the internal <style> block in index.html changes it to
+lightcoral. Since both selectors have the same specificity,
+the internal CSS is applied because it is loaded after the
+external CSS (CSS cascade rule).
+*/
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+/* Profile Card */
+.profile-card {
+    width: 220px;
+    padding: 20px;
+    background-color: lightgreen;
+    border-radius: 10px;
+}
+
+/* Playlist */
+.playlist {
+    width: 250px;
+    padding: 20px;
+    background-color: lightblue;
+    border-radius: 10px;
+}
+
+/* Hashtags */
+.hashtags {
+    width: 220px;
+    padding: 20px;
+    background-color: lightyellow;
+    border-radius: 10px;
+}

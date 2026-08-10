@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>YouTube Channels JSON Parse</title>
+</head>
+<body>
+
+    <h2>Favorite YouTube Channels</h2>
+    <div id="channels"></div>
+
+    <script>
+
+        // Function to convert JSON string into array of channel names
+        function getChannelNames(jsonString) {
+
+            // Convert JSON string to JavaScript array
+            const channels = JSON.parse(jsonString);
+
+            // Return only channel names
+            return channels.map(channel => channel.name);
+        }
+
+
+        // JSON string representing favorite YouTube channels
+        const youtubeJSON = `[
+            {
+                "name": "CodeWithHarry",
+                "category": "Programming"
+            },
+            {
+                "name": "Apna College",
+                "category": "Coding"
+            },
+            {
+                "name": "CarryMinati",
+                "category": "Entertainment"
+            }
+        ]`;
+
+
+        // Call function
+        const channelNames = getChannelNames(youtubeJSON);
+
+
+        // Print result in console
+        console.log(channelNames);
+
+
+        // Display result on webpage
+        document.getElementById("channels").innerHTML = `
+            <h3>${channelNames.join(", ")}</h3>
+        `;
+
+    </script>
+
+</body>
+</html>

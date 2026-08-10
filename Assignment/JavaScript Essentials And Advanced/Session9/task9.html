@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Movie LocalStorage Debug</title>
+</head>
+
+<body>
+
+    <h2>Favorite Movies</h2>
+    <div id="movieList"></div>
+
+
+    <script>
+
+        let movies = ['Jawan', 'Pathaan', 'Dunki'];
+
+
+        // Convert array into JSON string before saving
+        localStorage.setItem(
+            'movies',
+            JSON.stringify(movies)
+        );
+
+
+        // Get data from localStorage
+        let saved = localStorage.getItem('movies');
+
+
+        // Convert JSON string back into array
+        let arr = JSON.parse(saved);
+
+
+        // Console output
+        console.log(arr);
+
+
+        // Display movies
+        document.getElementById("movieList").innerHTML =
+            arr.join("<br>");
+
+    </script>
+
+</body>
+</html>

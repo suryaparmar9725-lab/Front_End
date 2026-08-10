@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Instagram Stories</title>
+
+    <style>
+        .story-container {
+            display: flex;
+            gap: 10px;
+        }
+
+        .story-card {
+            width: 180px;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .remove {
+            position: absolute;
+            right: 8px;
+            top: 5px;
+            color: red;
+            cursor: pointer;
+            font-size: 20px;
+        }
+    </style>
+
+</head>
+<body>
+
+    <h2>Instagram Stories</h2>
+
+    <div id="storyContainer" class="story-container">
+
+        <div class="story-card">
+            <span class="remove">✖</span>
+            <h3>Story 1</h3>
+            <p>Travel Photo</p>
+        </div>
+
+        <div class="story-card">
+            <span class="remove">✖</span>
+            <h3>Story 2</h3>
+            <p>Food Post</p>
+        </div>
+
+        <div class="story-card">
+            <span class="remove">✖</span>
+            <h3>Story 3</h3>
+            <p>Nature View</p>
+        </div>
+
+    </div>
+
+
+    <script>
+
+        let storyContainer = document.getElementById("storyContainer");
+
+
+        // Single event listener for all story cards
+        storyContainer.addEventListener("click", function(event) {
+
+            // Check if remove icon is clicked
+            if(event.target.classList.contains("remove")) {
+
+                // Remove only the clicked story card
+                event.target.closest(".story-card").remove();
+
+            }
+
+        });
+
+    </script>
+
+</body>
+</html>

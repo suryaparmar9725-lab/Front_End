@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mood Box</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    input {
+      padding: 10px;
+      width: 250px;
+      font-size: 16px;
+    }
+
+    #moodbox {
+      width: 300px;
+      height: 200px;
+      margin: 30px auto;
+      border: 2px solid black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Type a Color Name</h2>
+
+  <input type="text" id="colorInput" placeholder="Enter color (e.g. pink, yellow)">
+
+  <div id="moodbox">Your Mood Color</div>
+
+  <script>
+    const colorInput = document.getElementById("colorInput");
+    const moodBox = document.getElementById("moodbox");
+
+    function updateMoodColor() {
+      moodBox.style.backgroundColor = colorInput.value;
+    }
+
+    colorInput.addEventListener("input", updateMoodColor);
+  </script>
+
+</body>
+</html>

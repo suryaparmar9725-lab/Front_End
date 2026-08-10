@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>YouTube Notification Feed</title>
+
+    <style>
+        .notification {
+            width: 350px;
+            padding: 15px;
+            margin: 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            transition: opacity 0.5s ease;
+        }
+
+        .fade-out {
+            opacity: 0;
+        }
+
+        button {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+
+</head>
+<body>
+
+    <h2>YouTube Notifications</h2>
+
+    <button id="addNotification">
+        Load New Notification
+    </button>
+
+
+    <div id="notificationFeed">
+
+        <div class="notification">
+            <h3>New Video Uploaded</h3>
+            <p>Code With Harry uploaded a new JavaScript tutorial.</p>
+            <button class="dismiss">Dismiss</button>
+        </div>
+
+
+        <div class="notification">
+            <h3>New Subscriber</h3>
+            <p>You gained a new subscriber.</p>
+            <button class="dismiss">Dismiss</button>
+        </div>
+
+
+    </div>
+
+
+    <script>
+
+        let notificationFeed = document.getElementById("notificationFeed");
+        let addNotification = document.getElementById("addNotification");
+
+
+        let count = 1;
+
+
+        // Dynamically add notifications
+        addNotification.addEventListener("click", function() {
+
+            let notification = document.createElement("div");
+
+            notification.className = "notification";
+
+            notification.innerHTML = `
+                <h3>New Notification ${count}</h3>
+                <p>You have a new YouTube update.</p>
+                <button class="dismiss">Dismiss</button>
+            `;
+
+
+            notificationFeed.appendChild(notification);
+
+            count++;
+
+        });
+
+
+
+        // Event Delegation - single listener
+        notificationFeed.addEventListener("click", function(event) {
+
+
+            if(event.target.classList.contains("dismiss")) {
+
+
+                let card = event.target.closest(".notification");
+
+
+                // Fade out animation
+                card.classList.add("fade-out");
+
+
+                // Remove after animation
+                setTimeout(function() {
+
+                    card.remove();
+
+                }, 500);
+
+
+            }
+
+        });
+
+
+    </script>
+
+</body>
+</html>

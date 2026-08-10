@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Instagram URL Validation</title>
+</head>
+
+<body>
+
+<h2>Instagram Profile</h2>
+
+<input 
+type="text" 
+id="instagramURL" 
+placeholder="Enter Instagram URL"
+>
+
+<p id="error" style="color:red;"></p>
+
+
+<button onclick="validateInstagram()">
+Check URL
+</button>
+
+
+<script>
+
+function validateInstagram(){
+
+    let url = document.getElementById("instagramURL").value;
+
+    let error = document.getElementById("error");
+
+
+    if(
+        !url.startsWith("https://www.instagram.com/") ||
+        url.trim() === ""
+    ){
+
+        error.innerHTML = 
+        "Invalid Instagram profile URL";
+
+    }
+    else{
+
+        error.innerHTML = "";
+
+        console.log("Valid Instagram URL");
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Typing Example</title>
+</head>
+<body>
+
+    <h2>Dynamic Typing in JavaScript</h2>
+
+    <script>
+        // Function to show profile
+        function showProfile(name, followers, isPremium) {
+
+            console.log("Name:", name);
+            console.log("Premium User:", isPremium);
+
+            // Assign a string to followers
+            followers = "One Thousand";
+            console.log("Followers:", followers);
+            console.log("Type:", typeof followers);
+
+            // Assign a number to followers
+            followers = 1000;
+            console.log("Followers:", followers);
+            console.log("Type:", typeof followers);
+        }
+
+        // Function Call
+        showProfile("Surendra", 1500, true);
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Playlist Push and Pop</title>
+</head>
+<body>
+
+  <h2>Spotify Playlist Update</h2>
+
+  <p>Open the browser console to see the array changes.</p>
+
+  <script>
+    const playlists = [
+      {
+        name: "Top Bollywood Hits",
+        creator: "Spotify Music",
+        numberOfSongs: 50
+      },
+      {
+        name: "Workout Energy",
+        creator: "DJ Beats",
+        numberOfSongs: 35
+      },
+      {
+        name: "Chill Vibes",
+        creator: "Arijit Singh",
+        numberOfSongs: 40
+      }
+    ];
+
+    // Add new playlist using push()
+    playlists.push({
+      name: "Rock Legends",
+      creator: "Imagine Dragons",
+      numberOfSongs: 30,
+      genre: "Rock"
+    });
+
+    console.log("After push():", playlists);
+
+    // Remove last playlist using pop()
+    playlists.pop();
+
+    console.log("After pop():", playlists);
+  </script>
+
+</body>
+</html>

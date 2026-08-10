@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Zomato Restaurant Delete Feature</title>
+
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        .restaurant-card {
+            width: 300px;
+            padding: 15px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+
+        button {
+            padding: 8px 12px;
+            cursor: pointer;
+        }
+
+        .delete {
+            background-color: red;
+            color: white;
+            border: none;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+
+<h2>Zomato Restaurant List</h2>
+
+
+<div id="restaurantList"></div>
+
+
+
+<script>
+
+
+// Restaurant Array
+
+let restaurants = [
+
+    {
+        id: 1,
+        name: "Pizza Palace",
+        cuisine: "Italian",
+        rating: 4.5
+    },
+
+    {
+        id: 2,
+        name: "Spice Hub",
+        cuisine: "Indian",
+        rating: 4.2
+    },
+
+    {
+        id: 3,
+        name: "Burger Point",
+        cuisine: "Fast Food",
+        rating: 4.0
+    }
+
+];
+
+
+
+// Display Restaurant List
+
+function displayRestaurants(){
+
+
+    let output = "";
+
+
+    restaurants.forEach(function(item, index){
+
+
+        output += `
+
+        <div class="restaurant-card">
+
+            <h3>${item.name}</h3>
+
+            <p>Cuisine: ${item.cuisine}</p>
+
+            <p>Rating: ⭐ ${item.rating}</p>
+
+
+            <button class="delete" onclick="deleteRestaurant(${index})">
+                Delete
+            </button>
+
+        </div>
+
+        `;
+
+
+    });
+
+
+
+    document.getElementById("restaurantList").innerHTML = output;
+
+
+}
+
+
+
+
+// Delete Restaurant Function
+
+function deleteRestaurant(index){
+
+
+    // Remove item from array using splice()
+
+    restaurants.splice(index, 1);
+
+
+    // Re-render updated list
+
+    displayRestaurants();
+
+
+}
+
+
+
+// Initial Display
+
+displayRestaurants();
+
+
+</script>
+
+
+</body>
+</html>

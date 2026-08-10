@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Spotify Artist Profile Card</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+        }
+
+        .artist-card {
+            width: 300px;
+            background-color: #1db954;
+            color: white;
+
+            padding: 20px;
+            margin: 50px auto;
+
+            text-align: center;
+
+            /* Rounded card corners */
+            border-radius: 20px;
+        }
+
+        .artist-card img {
+            width: 150px;
+            height: 150px;
+
+            object-fit: cover;
+
+            /* Rounded image corners */
+            border-radius: 50%;
+
+            border: 5px solid white;
+        }
+
+        .artist-card h2 {
+            margin-top: 15px;
+        }
+
+        .artist-card p {
+            font-size: 16px;
+        }
+
+        .follow-btn {
+            background-color: white;
+            color: #1db954;
+
+            padding: 10px 25px;
+
+            border: none;
+            border-radius: 20px;
+
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .follow-btn:hover {
+            background-color: #eeeeee;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+
+    <div class="artist-card">
+
+        <img src="https://images.unsplash.com/photo-1615109398623-88346a601842?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bWFufGVufDB8fDB8fHww" 
+             alt="Artist Image">
+
+        <h2>Arijit Singh</h2>
+
+        <p>
+            Indian playback singer known for his soulful voice
+            and popular romantic songs.
+        </p>
+
+        <button class="follow-btn">
+            Follow
+        </button>
+
+    </div>
+
+
+</body>
+</html>

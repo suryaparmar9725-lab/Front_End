@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add to Cart</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 40px;
+    }
+
+    button {
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+
+    #cart {
+      margin-top: 20px;
+      padding: 15px;
+      border: 2px solid black;
+      width: 300px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    li {
+      list-style: none;
+      padding: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>🛒 Shopping Cart</h2>
+
+  <h3>Product: Wireless Headphones</h3>
+
+  <button id="addCartBtn">Add to Cart</button>
+
+  <div id="cart">
+    <h3>Your Cart</h3>
+    <ul id="cartItems"></ul>
+  </div>
+
+  <script>
+    function addToCart() {
+      const productName = "Wireless Headphones";
+
+      const li = document.createElement("li");
+      li.innerHTML = productName;
+
+      document.querySelector("#cartItems").appendChild(li);
+    }
+
+    const button = document.querySelector("#addCartBtn");
+
+    button.addEventListener("click", addToCart);
+  </script>
+
+</body>
+</html>

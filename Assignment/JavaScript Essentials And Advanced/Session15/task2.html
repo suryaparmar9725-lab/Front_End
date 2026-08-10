@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Spotify Playlist Class</title>
+</head>
+
+<body>
+
+    <h2>My Spotify Playlist</h2>
+
+    <script>
+
+        // Create Playlist class
+        class Playlist {
+
+            constructor(name, songs) {
+
+                this.name = name;
+                this.songs = songs;
+
+            }
+
+        }
+
+
+        // Create favorite playlist instance
+        const myPlaylist = new Playlist(
+            "My Favorite Vibes",
+            [
+                "Perfect - Ed Sheeran",
+                "Believer - Imagine Dragons",
+                "Heat Waves - Glass Animals"
+            ]
+        );
+
+
+        // Log playlist details
+        console.log(myPlaylist);
+
+    </script>
+
+</body>
+</html>

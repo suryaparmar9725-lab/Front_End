@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Delete Playlist Link</title>
+</head>
+
+<body>
+
+<h2>Delete Playlist</h2>
+
+<button onclick="deleteLink()">Delete Playlist</button>
+
+
+<script>
+
+
+let myPlaylists = JSON.parse(
+    localStorage.getItem("myPlaylists")
+) || [];
+
+
+
+// Delete Playlist Function
+
+function deletePlaylistLink(index){
+
+
+    myPlaylists.splice(index, 1);
+
+
+
+    localStorage.setItem(
+        "myPlaylists",
+        JSON.stringify(myPlaylists)
+    );
+
+
+    console.log(myPlaylists);
+
+
+}
+
+
+
+// Test Function
+
+function deleteLink(){
+
+
+    deletePlaylistLink(0);
+
+
+}
+
+
+</script>
+
+
+</body>
+</html>

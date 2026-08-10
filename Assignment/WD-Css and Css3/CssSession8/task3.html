@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Projects - Flexbox</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 30px 0;
+            color: #333;
+        }
+
+        /* Projects Container */
+        .projects {
+            display: flex;
+            flex-wrap: wrap;          /* Wrap cards on smaller screens */
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        /* Project Card */
+        .card {
+            flex: 1 1 280px;          /* Responsive width */
+            max-width: 320px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h2 {
+            color: #2563eb;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 15px;
+            background-color: #2563eb;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .btn:hover {
+            background-color: #1d4ed8;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>My Projects</h1>
+
+    <section class="projects">
+
+        <div class="card">
+            <h2>Portfolio Website</h2>
+            <p>A responsive portfolio built using HTML, CSS, and JavaScript.</p>
+            <a href="#" class="btn">View Project</a>
+        </div>
+
+        <div class="card">
+            <h2>Todo App</h2>
+            <p>A task management application with local storage support.</p>
+            <a href="#" class="btn">View Project</a>
+        </div>
+
+        <div class="card">
+            <h2>E-Commerce Store</h2>
+            <p>An online shopping website with product listings and a cart.</p>
+            <a href="#" class="btn">View Project</a>
+        </div>
+
+        <div class="card">
+            <h2>Weather App</h2>
+            <p>Displays real-time weather information using a weather API.</p>
+            <a href="#" class="btn">View Project</a>
+        </div>
+
+    </section>
+
+</body>
+</html>

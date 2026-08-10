@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Ratings</title>
+</head>
+<body>
+
+  <h2>Movie IMDb Ratings</h2>
+
+  <p>Open the browser console to see movie ratings.</p>
+
+  <script>
+    const movies = [
+      {
+        title: "Inception",
+        year: 2010,
+        rating: {
+          imdb: 8.8,
+          rottenTomatoes: 87
+        }
+      },
+      {
+        title: "Interstellar",
+        year: 2014,
+        rating: {
+          imdb: 8.7,
+          rottenTomatoes: 73
+        }
+      },
+      {
+        title: "The Dark Knight",
+        year: 2008,
+        rating: {
+          imdb: 9.0,
+          rottenTomatoes: 94
+        }
+      }
+    ];
+
+    // Print movie title and IMDb rating
+    movies.forEach(function(movie) {
+      console.log(
+        "Movie: " + movie.title +
+        ", IMDb Rating: " + movie.rating.imdb
+      );
+    });
+  </script>
+
+</body>
+</html>

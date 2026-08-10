@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flipkart Product JSON</title>
+</head>
+<body>
+
+    <h2>Product Details</h2>
+    <div id="product"></div>
+
+    <script>
+
+        // Create product object
+        const product = {
+            name: "Samsung Galaxy S25",
+            price: 79999,
+            rating: 4.8
+        };
+
+
+        // Convert JavaScript object to JSON string
+        const jsonProduct = JSON.stringify(product);
+
+
+        // Print JSON string in console
+        console.log(jsonProduct);
+
+
+        // Display JSON string on webpage
+        document.getElementById("product").innerHTML = `
+            <h3>${jsonProduct}</h3>
+        `;
+
+    </script>
+
+</body>
+</html>

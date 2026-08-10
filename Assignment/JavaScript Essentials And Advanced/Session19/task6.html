@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Zomato Restaurant Manager</title>
+
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        .form-box {
+            width: 300px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+
+        input, button {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+        }
+
+        .add-btn {
+            background-color: red;
+            color: white;
+            border: none;
+        }
+
+        .restaurant-card {
+            width: 350px;
+            padding: 15px;
+            margin: 15px 0;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+
+        .edit {
+            background-color: orange;
+            color: white;
+            border: none;
+            width: 80px;
+        }
+
+        .delete {
+            background-color: red;
+            color: white;
+            border: none;
+            width: 80px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+
+<h2>Zomato Add Restaurant</h2>
+
+
+<!-- Add Restaurant Form -->
+
+<div class="form-box">
+
+    <input 
+        type="text" 
+        id="restaurantName"
+        placeholder="Restaurant Name"
+    >
+
+
+    <input 
+        type="text"
+        id="cuisine"
+        placeholder="Cuisine"
+    >
+
+
+    <input 
+        type="number"
+        id="rating"
+        placeholder="Rating"
+    >
+
+
+    <button class="add-btn" onclick="addRestaurant()">
+        Add Restaurant
+    </button>
+
+</div>
+
+
+
+<h2>Restaurant List</h2>
+
+
+<div id="restaurantList"></div>
+
+
+
+<script>
+
+
+// Store restaurants
+
+let restaurants = [];
+
+
+
+// Add Restaurant
+
+function addRestaurant(){
+
+
+    let name = document.getElementById("restaurantName").value;
+
+    let cuisine = document.getElementById("cuisine").value;
+
+    let rating = document.getElementById("rating").value;
+
+
+
+    let restaurant = {
+
+        id: Date.now(),
+
+        name: name,
+
+        cuisine: cuisine,
+
+        rating: rating
+
+    };
+
+
+
+    restaurants.push(restaurant);
+
+
+    displayRestaurants();
+
+
+
+    document.getElementById("restaurantName").value = "";
+
+    document.getElementById("cuisine").value = "";
+
+    document.getElementById("rating").value = "";
+
+
+}
+
+
+
+
+// Display Restaurant List
+
+function displayRestaurants(){
+
+
+    let output = "";
+
+
+
+    restaurants.forEach(function(item){
+
+
+        output += `
+
+        <div class="restaurant-card">
+
+
+            <h3>${item.name}</h3>
+
+            <p>Cuisine: ${item.cuisine}</p>
+
+            <p>Rating: ⭐ ${item.rating}</p>
+
+
+            <button class="edit" onclick="editRestaurant(${item.id})">
+                Edit
+            </button>
+
+
+            <button class="delete" onclick="deleteRestaurant(${item.id})">
+                Delete
+            </button>
+
+
+        </div>
+
+        `;
+
+
+    });
+
+
+
+    document.getElementById("restaurantList").innerHTML = output;
+
+
+}
+
+
+
+
+// Edit Restaurant
+
+function editRestaurant(id){
+
+
+    let restaurant = restaurants.find(function(item){
+
+        return item.id === id;
+
+    });
+
+
+
+    let newName = prompt(
+        "Enter restaurant name",
+        restaurant.name
+    );
+
+
+    let newCuisine = prompt(
+        "Enter cuisine",
+        restaurant.cuisine
+    );
+
+
+    let newRating = prompt(
+        "Enter rating",
+        restaurant.rating
+    );
+
+
+
+    restaurant.name = newName;
+
+    restaurant.cuisine = newCuisine;
+
+    restaurant.rating = newRating;
+
+
+
+    displayRestaurants();
+
+
+}
+
+
+
+
+// Delete Restaurant
+
+function deleteRestaurant(id){
+
+
+    restaurants = restaurants.filter(function(item){
+
+        return item.id !== id;
+
+    });
+
+
+
+    displayRestaurants();
+
+
+}
+
+
+
+</script>
+
+
+</body>
+</html>

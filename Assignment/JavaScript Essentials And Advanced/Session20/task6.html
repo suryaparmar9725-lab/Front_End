@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Zomato Review Form Testing</title>
+
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        .review-box {
+            width: 350px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+
+        input, textarea, button {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+        }
+
+        button {
+            background-color: red;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .error {
+            color: red;
+        }
+
+        .success {
+            color: green;
+        }
+
+        .review-card {
+            border: 1px solid gray;
+            margin-top: 15px;
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+
+<h2>Zomato Add Review</h2>
+
+
+<div class="review-box">
+
+
+    <input 
+        type="text"
+        id="userName"
+        placeholder="Enter Your Name"
+    >
+
+
+    <textarea 
+        id="review"
+        placeholder="Write your review">
+    </textarea>
+
+
+    <input 
+        type="number"
+        id="rating"
+        placeholder="Rating (1-5)"
+    >
+
+
+    <button onclick="addReview()">
+        Submit Review
+    </button>
+
+
+    <p id="error" class="error"></p>
+
+    <p id="success" class="success"></p>
+
+
+</div>
+
+
+
+<h2>Reviews</h2>
+
+<div id="reviewList"></div>
+
+
+
+<script>
+
+
+// Review storage array
+
+let reviews = [];
+
+
+
+
+// Add Review Function
+
+function addReview(){
+
+
+    let name = document.getElementById("userName").value;
+
+    let review = document.getElementById("review").value;
+
+    let rating = document.getElementById("rating").value;
+
+
+
+    let error = document.getElementById("error");
+
+    let success = document.getElementById("success");
+
+
+
+    error.innerHTML = "";
+
+    success.innerHTML = "";
+
+
+
+    // Validation checks
+
+
+    if(name.trim() === ""){
+
+
+        error.innerHTML = "Name is required";
+
+        return;
+
+    }
+
+
+
+    // Bug Fix 1: Empty review validation
+
+    if(review.trim() === ""){
+
+
+        error.innerHTML = 
+        "Review cannot be empty";
+
+
+        return;
+
+    }
+
+
+
+    // Bug Fix 2: Rating validation
+
+    if(rating < 1 || rating > 5){
+
+
+        error.innerHTML =
+        "Rating must be between 1 and 5";
+
+
+        return;
+
+    }
+
+
+
+
+    let reviewData = {
+
+
+        id: Date.now(),
+
+        name:name,
+
+        review:review,
+
+        rating:rating
+
+
+    };
+
+
+
+    reviews.push(reviewData);
+
+
+
+    displayReviews();
+
+
+
+    success.innerHTML =
+    "Review submitted successfully";
+
+
+
+    clearForm();
+
+
+}
+
+
+
+
+// Display Reviews
+
+function displayReviews(){
+
+
+    let output = "";
+
+
+
+    reviews.forEach(function(item){
+
+
+        output += `
+
+        <div class="review-card">
+
+
+            <h3>${item.name}</h3>
+
+
+            <p>${item.review}</p>
+
+
+            <p>
+            Rating: ⭐ ${item.rating}
+            </p>
+
+
+        </div>
+
+        `;
+
+
+    });
+
+
+
+    document.getElementById("reviewList").innerHTML = output;
+
+
+}
+
+
+
+
+// Clear Form
+
+function clearForm(){
+
+
+    document.getElementById("userName").value = "";
+
+    document.getElementById("review").value = "";
+
+    document.getElementById("rating").value = "";
+
+
+}
+
+
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Browser Console Error Example</title>
+</head>
+
+<body>
+
+    <h2>JSON Parse Error Debugging</h2>
+
+    <button onclick="showError()">
+        Run Error Code
+    </button>
+
+    <button onclick="fixError()">
+        Run Fixed Code
+    </button>
+
+    <p>
+        Open Chrome DevTools → Console (F12) to see the output.
+    </p>
+
+
+    <script>
+
+        // Buggy function - creates error
+        function showError() {
+
+            let data = undefined;
+
+            // Error: undefined is not valid JSON
+            let user = JSON.parse(data);
+
+            console.log(user);
+
+        }
+
+
+        // Fixed function
+        function fixError() {
+
+            let data = '{"name":"Rahul","age":25}';
+
+            let user = JSON.parse(data);
+
+            console.log("Fixed User Data:", user);
+
+        }
+
+
+    </script>
+
+</body>
+</html>

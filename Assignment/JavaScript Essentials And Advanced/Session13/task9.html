@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Error Stack Trace Example</title>
+</head>
+
+<body>
+
+    <h2>Browser Console Error Stack Trace</h2>
+
+    <p>
+        Open the browser console (F12 → Console) to see the thrown error.
+    </p>
+
+
+    <script>
+
+        // Function that throws an error
+        function checkSpotifyURL(url) {
+
+            const validURL = "https://open.spotify.com/";
+
+            if (!url.startsWith(validURL)) {
+
+                throw new Error("Invalid Spotify URL");
+
+            }
+
+            return "Valid Spotify URL";
+
+        }
+
+
+        // Try...catch to handle error
+        try {
+
+            console.log(
+                checkSpotifyURL("https://youtube.com/music")
+            );
+
+        } 
+        catch(error) {
+
+            console.error(error);
+
+            console.log("Error Message:", error.message);
+
+            console.log("Stack Trace:", error.stack);
+
+        }
+
+
+    </script>
+
+</body>
+</html>

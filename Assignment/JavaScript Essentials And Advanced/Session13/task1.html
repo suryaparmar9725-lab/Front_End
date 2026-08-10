@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Validate Spotify URL</title>
+</head>
+
+<body>
+
+    <h2>Spotify URL Validator</h2>
+
+    <script>
+
+        // Function to validate Spotify URL
+        function validateSpotifyURL(url) {
+
+            const validURL = "https://open.spotify.com/";
+
+
+            // Check URL starts with Spotify domain
+            if (!url.startsWith(validURL)) {
+
+                throw new Error("Invalid Spotify URL");
+
+            }
+
+
+            return "Valid Spotify URL";
+
+        }
+
+
+        // Test function
+        try {
+
+            console.log(
+                validateSpotifyURL("https://open.spotify.com/track/12345")
+            );
+
+
+            console.log(
+                validateSpotifyURL("https://youtube.com/song")
+            );
+
+        } 
+        catch(error) {
+
+            console.log(error.message);
+
+        }
+
+    </script>
+
+</body>
+</html>

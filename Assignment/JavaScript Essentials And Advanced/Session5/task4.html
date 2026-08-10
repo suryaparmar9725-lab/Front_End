@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Followers Formatter</title>
+</head>
+<body>
+
+    <h2>Instagram Followers Formatter</h2>
+
+    <script>
+        // Arrow Function
+        const formatFollowers = (followers) => {
+            if (followers >= 1000000) {
+                return (followers / 1000000) + "M";
+            } else if (followers >= 1000) {
+                return (followers / 1000).toFixed(1) + "K";
+            } else {
+                return followers.toString();
+            }
+        };
+
+        // Test the function
+        console.log(formatFollowers(950));        // 950
+        console.log(formatFollowers(1500));       // 1.5K
+        console.log(formatFollowers(25000));      // 25.0K
+        console.log(formatFollowers(2000000));    // 2M
+    </script>
+
+</body>
+</html>

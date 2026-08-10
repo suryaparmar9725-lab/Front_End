@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Remove Card Using Event Delegation</title>
+
+    <style>
+        .card {
+            width: 250px;
+            padding: 15px;
+            margin: 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            position: relative;
+        }
+
+        .remove-btn {
+            position: absolute;
+            right: 10px;
+            top: 5px;
+            cursor: pointer;
+            color: red;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Product Cards</h2>
+
+    <div id="cardContainer">
+
+        <div class="card">
+            <span class="remove-btn">✖</span>
+            <h3>iPhone 15</h3>
+            <p>Price: ₹70000</p>
+        </div>
+
+        <div class="card">
+            <span class="remove-btn">✖</span>
+            <h3>Laptop</h3>
+            <p>Price: ₹55000</p>
+        </div>
+
+    </div>
+
+
+    <script>
+
+        let cardContainer = document.getElementById("cardContainer");
+
+
+        // Single event listener for all current and future cards
+        cardContainer.addEventListener("click", function(event) {
+
+            // Check if X icon is clicked
+            if(event.target.classList.contains("remove-btn")) {
+
+                // Remove only clicked card
+                event.target.closest(".card").remove();
+
+            }
+
+        });
+
+    </script>
+
+</body>
+</html>

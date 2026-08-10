@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Spotify Playlist</title>
+</head>
+<body>
+
+  <h2>Spotify Playlist Update</h2>
+
+  <p>Open the browser console to see the updated playlist array.</p>
+
+  <script>
+    const playlists = [
+      {
+        name: "Top Bollywood Hits",
+        creator: "Spotify Music",
+        numberOfSongs: 50
+      },
+      {
+        name: "Workout Energy",
+        creator: "DJ Beats",
+        numberOfSongs: 35
+      },
+      {
+        name: "Chill Vibes",
+        creator: "Arijit Singh",
+        numberOfSongs: 40
+      }
+    ];
+
+    // Add new playlist using push()
+    playlists.push({
+      name: "Late Night Drive",
+      creator: "The Weeknd",
+      numberOfSongs: 25
+    });
+
+    // Print updated array
+    console.log(playlists);
+  </script>
+
+</body>
+</html>

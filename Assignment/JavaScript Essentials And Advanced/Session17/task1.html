@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Song Cards Remove</title>
+
+    <style>
+        .card {
+            width: 250px;
+            padding: 15px;
+            margin: 10px;
+            border: 1px solid black;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 8px;
+        }
+
+        .remove {
+            cursor: pointer;
+            color: red;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+<body>
+
+    <h2>My Spotify Playlist</h2>
+
+    <div id="songContainer"></div>
+
+
+    <script>
+
+        // Song array
+        let songs = [
+            "Believer - Imagine Dragons",
+            "Perfect - Ed Sheeran",
+            "Shape of You - Ed Sheeran",
+            "Night Changes - One Direction"
+        ];
+
+
+        let songContainer = document.getElementById("songContainer");
+
+
+        // Create song cards
+        songs.forEach(function(song) {
+
+            let card = document.createElement("div");
+            card.className = "card";
+
+            card.innerHTML = `
+                <span>${song}</span>
+                <span class="remove">✖</span>
+            `;
+
+            songContainer.appendChild(card);
+
+        });
+
+
+        // Event Delegation
+        songContainer.addEventListener("click", function(event) {
+
+            // Check if X icon is clicked
+            if(event.target.classList.contains("remove")) {
+
+                // Remove only clicked card
+                event.target.parentElement.remove();
+
+            }
+
+        });
+
+    </script>
+
+</body>
+</html>

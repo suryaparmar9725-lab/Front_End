@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recent Searches</title>
+</head>
+<body>
+
+    <h2>Save Recent Searches</h2>
+
+    <button onclick="saveRecentSearch('Biryani')">Search Biryani</button>
+    <button onclick="saveRecentSearch('Sneakers')">Search Sneakers</button>
+    <button onclick="saveRecentSearch('Mobile')">Search Mobile</button>
+
+    <h3>Recent Searches:</h3>
+    <div id="searchList"></div>
+
+
+    <script>
+
+        // Function to save recent search
+        function saveRecentSearch(query) {
+
+            // Get existing searches from localStorage
+            let searches = JSON.parse(localStorage.getItem("recentSearches")) || [];
+
+
+            // Add new search term
+            searches.push(query);
+
+
+            // Convert array to JSON and save in localStorage
+            localStorage.setItem(
+                "recentSearches",
+                JSON.stringify(searches)
+            );
+
+
+            console.log("Saved Searches:", searches);
+
+            displaySearches();
+        }
+
+
+        // Display saved searches
+        function displaySearches() {
+
+            let searches = JSON.parse(
+                localStorage.getItem("recentSearches")
+            ) || [];
+
+
+            document.getElementById("searchList").innerHTML =
+                searches.join("<br>");
+
+        }
+
+
+        // Load searches when page opens
+        displaySearches();
+
+    </script>
+
+</body>
+</html>

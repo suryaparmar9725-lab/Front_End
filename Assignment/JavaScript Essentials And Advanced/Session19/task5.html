@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Spotify Playlist Manager</title>
+
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        .form-box {
+            width: 300px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+
+        input, textarea, button {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+        }
+
+        .add-btn {
+            background-color: green;
+            color: white;
+            border: none;
+        }
+
+        .playlist-card {
+            width: 350px;
+            padding: 15px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+
+        .edit {
+            background-color: orange;
+            color: white;
+            border: none;
+            width: 80px;
+        }
+
+        .delete {
+            background-color: red;
+            color: white;
+            border: none;
+            width: 80px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+
+<h2>Spotify Create Playlist</h2>
+
+
+<!-- Playlist Form -->
+
+<div class="form-box">
+
+    <input 
+        type="text" 
+        id="playlistName" 
+        placeholder="Playlist Name"
+    >
+
+
+    <textarea 
+        id="playlistDescription" 
+        placeholder="Playlist Description">
+    </textarea>
+
+
+    <button class="add-btn" onclick="addPlaylist()">
+        Add Playlist
+    </button>
+
+</div>
+
+
+
+<h2>My Playlists</h2>
+
+
+<div id="playlistList"></div>
+
+
+
+<script>
+
+
+// Playlist Array
+
+let playlists = [];
+
+
+
+// Add Playlist
+
+function addPlaylist(){
+
+
+    let name = document.getElementById("playlistName").value;
+
+    let description = document.getElementById("playlistDescription").value;
+
+
+
+    let playlist = {
+
+        id: Date.now(),
+
+        name: name,
+
+        description: description
+
+    };
+
+
+    playlists.push(playlist);
+
+
+    displayPlaylists();
+
+
+    document.getElementById("playlistName").value = "";
+
+    document.getElementById("playlistDescription").value = "";
+
+
+}
+
+
+
+
+// Display Playlists
+
+function displayPlaylists(){
+
+
+    let output = "";
+
+
+    playlists.forEach(function(item){
+
+
+        output += `
+
+        <div class="playlist-card">
+
+            <h3>${item.name}</h3>
+
+            <p>${item.description}</p>
+
+
+            <button class="edit" onclick="editPlaylist(${item.id})">
+                Edit
+            </button>
+
+
+            <button class="delete" onclick="deletePlaylist(${item.id})">
+                Delete
+            </button>
+
+
+        </div>
+
+        `;
+
+
+    });
+
+
+
+    document.getElementById("playlistList").innerHTML = output;
+
+
+}
+
+
+
+
+// Edit Playlist
+
+function editPlaylist(id){
+
+
+    let playlist = playlists.find(function(item){
+
+        return item.id === id;
+
+    });
+
+
+
+    let newName = prompt(
+        "Enter new playlist name",
+        playlist.name
+    );
+
+
+    let newDescription = prompt(
+        "Enter new description",
+        playlist.description
+    );
+
+
+
+    playlist.name = newName;
+
+    playlist.description = newDescription;
+
+
+
+    // Refresh UI
+
+    displayPlaylists();
+
+
+}
+
+
+
+
+// Delete Playlist
+
+function deletePlaylist(id){
+
+
+    playlists = playlists.filter(function(item){
+
+
+        return item.id !== id;
+
+
+    });
+
+
+
+    // Refresh UI
+
+    displayPlaylists();
+
+
+}
+
+
+
+</script>
+
+
+</body>
+</html>

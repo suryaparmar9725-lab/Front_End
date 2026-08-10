@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Instagram Total Likes</title>
+</head>
+<body>
+
+    <h2>Total Instagram Post Likes</h2>
+
+    <div id="likesResult"></div>
+
+    <script>
+
+        // Array of Instagram post objects
+        let posts = [
+            {
+                caption: "My Travel Photo",
+                likes: 1200
+            },
+            {
+                caption: "Food Post",
+                likes: 850
+            },
+            {
+                caption: "Nature Picture",
+                likes: 2000
+            },
+            {
+                caption: "New Profile Photo",
+                likes: 1500
+            }
+        ];
+
+
+        // Using reduce() to calculate total likes
+        let totalLikes = posts.reduce(function(accumulator, post) {
+            return accumulator + post.likes;
+        }, 0);
+
+
+        // Display total likes
+        document.getElementById("likesResult").innerHTML = `
+            <h3>Total Likes: ${totalLikes}</h3>
+        `;
+
+
+        // Show result in console
+        console.log("Total Likes:", totalLikes);
+
+    </script>
+
+</body>
+</html>

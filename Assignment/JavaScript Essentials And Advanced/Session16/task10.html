@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Transaction Total Amount</title>
+</head>
+<body>
+
+    <h2>Total Amount Spent</h2>
+
+    <div id="amountResult"></div>
+
+    <script>
+
+        // Array of transaction objects
+        let transactions = [
+            {
+                title: "Shopping",
+                amount: 2500
+            },
+            {
+                title: "Food",
+                amount: 800
+            },
+            {
+                title: "Travel",
+                amount: 1500
+            },
+            {
+                title: "Mobile Recharge",
+                amount: 500
+            }
+        ];
+
+
+        // Using map() and reduce() one-liner
+        let totalSpent = transactions
+            .map(transaction => transaction.amount)
+            .reduce((total, amount) => total + amount, 0);
+
+
+        // Display result
+        document.getElementById("amountResult").innerHTML = `
+            <h3>Total Amount Spent: ₹${totalSpent}</h3>
+        `;
+
+
+        // Console output
+        console.log("Total Spent:", totalSpent);
+
+    </script>
+
+</body>
+</html>

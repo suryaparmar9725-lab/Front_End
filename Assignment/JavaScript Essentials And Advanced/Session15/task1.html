@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Spotify Playlist Class</title>
+</head>
+
+<body>
+
+    <h2>Playlist Example</h2>
+
+    <script>
+
+        // Create Playlist class
+        class Playlist {
+
+            // Constructor with name and songs parameters
+            constructor(name, songs) {
+
+                this.name = name;
+
+                this.songs = songs;
+
+            }
+
+        }
+
+
+        // Create Spotify playlist instance
+        const chillPlaylist = new Playlist(
+            "Chill Vibes",
+            [
+                "Perfect - Ed Sheeran",
+                "Believer - Imagine Dragons",
+                "Lovely - Billie Eilish"
+            ]
+        );
+
+
+        // Display playlist details
+        console.log("Playlist Name:", chillPlaylist.name);
+
+        console.log("Songs:", chillPlaylist.songs);
+
+
+    </script>
+
+</body>
+</html>

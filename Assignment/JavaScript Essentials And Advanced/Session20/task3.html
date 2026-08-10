@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Zomato Add Review</title>
+
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        .review-box {
+            width: 300px;
+        }
+
+        textarea, button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        button {
+            background-color: red;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .error {
+            color: red;
+        }
+
+        .success {
+            color: green;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+
+<h2>Zomato Add Review</h2>
+
+
+<div class="review-box">
+
+
+    <form onsubmit="addReview(event)">
+
+
+        <textarea 
+            id="review"
+            placeholder="Write your review">
+        </textarea>
+
+
+        <p id="errorMessage" class="error"></p>
+
+
+        <button type="submit">
+            Submit Review
+        </button>
+
+
+    </form>
+
+
+    <p id="successMessage" class="success"></p>
+
+
+</div>
+
+
+
+<script>
+
+
+function addReview(event){
+
+
+    // Prevent form refresh
+
+    event.preventDefault();
+
+
+
+    let review = document.getElementById("review").value;
+
+
+    let errorMessage = document.getElementById("errorMessage");
+
+    let successMessage = document.getElementById("successMessage");
+
+
+
+    // Clear messages
+
+    errorMessage.innerHTML = "";
+
+    successMessage.innerHTML = "";
+
+
+
+    // Validation check
+
+    if(review.trim() === ""){
+
+
+        errorMessage.innerHTML = 
+        "Review cannot be empty! Please write your review.";
+
+
+        return;
+
+
+    }
+
+
+
+    // Successful submission
+
+    successMessage.innerHTML =
+    "Review submitted successfully!";
+
+
+    console.log("Review:", review);
+
+
+
+    // Clear textarea
+
+    document.getElementById("review").value = "";
+
+
+}
+
+
+</script>
+
+
+</body>
+</html>
