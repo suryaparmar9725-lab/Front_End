@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Post Layout</title>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Roboto&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: 'Roboto', sans-serif;
+            background: white;
+            color: black;
+        }
+
+        .main {
+            max-width: 600px;
+            margin: auto;
+            background: rgb(226, 224, 224);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+        }
+
+        h1 {
+            font-family: 'Merriweather', serif;
+            font-size: 40px;
+            margin-bottom: 10px;
+            color: black;
+        }
+
+        h2 {
+            font-family: 'Merriweather', serif;
+            font-size: 30px;
+            margin-bottom: 20px;
+            color: rgba(53, 51, 51, 0.973);
+
+        }
+
+        p {
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+
+        @media only screen and (max-width: 768px) {
+            body {
+                padding: 15px;
+            }
+
+            .main {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 30px;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <h1>The Art of Writing Clean Code</h1>
+        <h2>A developer's guide to clarity and maintainability</h2>
+
+        <p>
+            Writing clean code is not just about making your program work; it's about making it easy for others (and
+            your future self) to read and maintain.
+            Clean code is simple, expressive, and consistent.
+        </p>
+
+        <p>
+            One of the most important practices is choosing meaningful variable and function names.
+            This reduces the need for unnecessary comments and helps anyone understand the intent of the code at a
+            glance.
+        </p>
+
+        <p>
+            Additionally, breaking down large functions into smaller, reusable ones not only improves readability but
+            also makes testing and debugging more efficient.
+        </p>
+
+        <p>
+            Remember: code is read far more often than it is written.
+            By prioritizing readability, you're investing in the long-term success of your project.
+        </p>
+    </div>
+</body>
+
+</html>

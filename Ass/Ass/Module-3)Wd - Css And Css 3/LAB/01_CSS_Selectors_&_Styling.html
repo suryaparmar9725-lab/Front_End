@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content Form </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2 class="h2">Content Us</h2>
+    <form id="form">
+        <div class="group">
+            <!-- Full Name -->
+            <label for="Full Name">Full Name:</label>
+            <input type="text" class="input" placeholder="Enter your Full Name" required  minlength="3" maxlength="7">
+        </div>
+        <div class="group">
+            <!-- Email -->
+            <label for="Email">Email:</label>
+            <input type="email" class="input" placeholder="Enter your Email" pattern="[a-z0-9._]+@+[a-z]+\.+[a-z]{2,3}$" required >
+        </div>
+        <div class="group">
+            <!-- Message -->
+            <label for="Message">Message:</label>
+            <textarea  name="Message" class="input" placeholder="Type your message..." required ></textarea>        
+        </div>
+        
+            <!-- button -->
+            <button type="submit" class="submit">Send Message</button>
+        
+    </form>
+
+</body>
+</html>
