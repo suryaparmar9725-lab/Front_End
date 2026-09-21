@@ -1,0 +1,266 @@
+{
+  "admin": [
+    {
+      "id": "1",
+      "name": "admin",
+      "email": "admin@gmail.com",
+      "password": "1234"
+    },
+    {
+      "id": "2",
+      "name": "subadmin",
+      "email": "subadmin@gmail.com",
+      "password": "12345"
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "name": "user",
+      "email": "user@gmail.com",
+      "password": "12345",
+      "status": "unblock"
+    },
+    {
+      "id": "2",
+      "name": "user2",
+      "email": "user2@gmail.com",
+      "password": "1234",
+      "status": "block"
+    },
+    {
+      "id": "f48WluHHXFI",
+      "name": "surendra",
+      "email": "surendra@gmail.com",
+      "password": "3233",
+      "status": "unblock"
+    },
+    {
+      "id": "sCZ3BbT6EWs",
+      "name": "sejal",
+      "email": "sejal@gmail.com",
+      "password": "123",
+      "status": "unblock"
+    },
+    {
+      "id": "f2jHDVZu2hk",
+      "name": "vinod thakor",
+      "email": "vinod@gmail.com",
+      "password": "1234",
+      "status": "unblock"
+    }
+  ],
+  "blog": [
+    {
+      "id": "2",
+      "image": "https://images.unsplash.com/photo-1625978827241-c8bdc7cc3ff7?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fHRyYWNraW5nfGVufDB8fDB8fHww",
+      "post": "John Doe",
+      "title": "DivingTrip",
+      "desc": " Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam eos",
+      "date": "2026-07-10"
+    },
+    {
+      "id": "3",
+      "image": "https://images.unsplash.com/photo-1516201407043-a9bc36cab889?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHRyYWNraW5nfGVufDB8fDB8fHww",
+      "post": "Demo",
+      "title": "Diving Trip",
+      "desc": " Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam eos",
+      "date": "30 Aug 2024"
+    }
+  ],
+  "Destination": [
+    {
+      "id": "1",
+      "image": "https://plus.unsplash.com/premium_photo-1714051660720-888e8454a021?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bmV3JTIweW9ya3xlbnwwfHwwfHx8MA%3D%3D",
+      "title": "New York"
+    },
+    {
+      "id": "2",
+      "image": "https://plus.unsplash.com/premium_photo-1694475481348-7cbe417be129?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Y2FuYWRhfGVufDB8fDB8fHww",
+      "title": "Canada"
+    },
+    {
+      "id": "3",
+      "image": "https://images.unsplash.com/photo-1516306580123-e6e52b1b7b5f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YnJhemlsfGVufDB8fDB8fHww",
+      "title": "Brazil"
+    },
+    {
+      "id": "4",
+      "image": "https://images.unsplash.com/photo-1508433957232-3107f5fd5995?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YW1lcmljYXxlbnwwfHwwfHx8MA%3D%3D",
+      "title": "America"
+    },
+    {
+      "id": "5",
+      "image": "https://images.unsplash.com/photo-1590089415225-401ed6f9db8e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8aXJlbGFuZHxlbnwwfHwwfHx8MA%3D%3D",
+      "title": "Ireland"
+    },
+    {
+      "id": "_Ii4exySjWU",
+      "title": "JAPAN",
+      "image": "https://plus.unsplash.com/premium_photo-1661878091370-4ccb8763756a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8amFwYW58ZW58MHx8MHx8fDA%3D"
+    },
+    {
+      "id": "dS6mLFsg1Vc",
+      "title": "Demo",
+      "image": "https://plus.unsplash.com/premium_photo-1661878091370-4ccb8763756a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8amFwYW58ZW58MHx8MHx8fDA%3D"
+    },
+    {
+      "id": "0gk3HikVi_w",
+      "title": "Demo",
+      "image": "https://images.unsplash.com/photo-1773332611514-238856b76198?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDF8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxfHx8ZW58MHx8fHx8"
+    }
+  ],
+  "ExploreTour": [
+    {
+      "id": "1",
+      "image": "https://images.unsplash.com/photo-1569949381669-ecf31ae8e613?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dG91cnxlbnwwfHwwfHx8MA%3D%3D",
+      "title": "Week End Tour"
+    },
+    {
+      "id": "2",
+      "image": "https://images.unsplash.com/photo-1465778893808-9b3d1b443be4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dG91cnxlbnwwfHwwfHx8MA%3D%3D",
+      "title": "Priscilla Du Preez"
+    },
+    {
+      "id": "3",
+      "image": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8dG91cnxlbnwwfHwwfHx8MA%3D%3D",
+      "title": "Bing Hui Yau"
+    },
+    {
+      "id": "4",
+      "image": "https://plus.unsplash.com/premium_photo-1687653079484-12a596ddf7a9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fHRvdXJ8ZW58MHx8MHx8fDA%3D",
+      "title": "Feliipa Ditadi"
+    },
+    {
+      "id": "5",
+      "image": "https://images.unsplash.com/photo-1606820854416-439b3305ff39?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8dG91cnxlbnwwfHwwfHx8MA%3D%3D",
+      "title": "Andy Holmes"
+    }
+  ],
+  "galary": [
+    {
+      "id": "1",
+      "image": "https://plus.unsplash.com/premium_photo-1664547606209-fb31ec979c85?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHRvdXJ8ZW58MHx8MHx8fDA%3D",
+      "name": "World Tour",
+      "lastUpdateDate": "5 min ago"
+    },
+    {
+      "id": "2",
+      "image": "https://images.unsplash.com/photo-1615277716590-d87d101caa70?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHRvdXJ8ZW58MHx8MHx8fDA%3D",
+      "name": "Dating Scoute",
+      " ": "1 hour ago"
+    },
+    {
+      "id": "3",
+      "image": "https://images.unsplash.com/photo-1519922639192-e73293ca430e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dG91cmlzbXxlbnwwfHwwfHx8MA%3D%3D",
+      "name": "Jackek Dailegu",
+      "lastUpdateDate": "45 min ago"
+    },
+    {
+      "id": "4",
+      "image": "https://images.unsplash.com/photo-1619120238346-978e07731e77?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8dG91cmlzbXxlbnwwfHwwfHx8MA%3D%3D",
+      "name": "Ali Mahh",
+      "lastUpdateDate": "5 hour ago"
+    },
+    {
+      "id": "KA6dWyiMitM"
+    }
+  ],
+  "TravelGuid": [
+    {
+      "id": "1",
+      "image": "https://images.unsplash.com/photo-1615109398623-88346a601842?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bWFufGVufDB8fDB8fHww",
+      "name": "John Doe",
+      "Designation": "Tour Guid"
+    },
+    {
+      "id": "2",
+      "image": "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bWFufGVufDB8fDB8fHww",
+      "name": "Christian Buehner",
+      "Designation": "Track Guid"
+    },
+    {
+      "id": "3",
+      "image": "https://images.unsplash.com/photo-1581382575275-97901c2635b7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bWFufGVufDB8fDB8fHww",
+      "name": "Mitchel Lio",
+      "Designation": "Travels Guid"
+    }
+  ],
+  "Services": [
+    {
+      "id": "6jArgz64ClY",
+      "title": "wdemo",
+      "desc": "We are 24/ 7 hour ready to our customer services",
+      "icon": "https://plus.unsplash.com/premium_photo-1668373587657-0211ba2b8805?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dG9vbHN8ZW58MHx8MHx8fDA%3D"
+    }
+  ],
+  "Tour": [
+    {
+      "id": "3",
+      "image": "https://images.unsplash.com/photo-1554072675-66db59dba46f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Z2VybWFueXxlbnwwfHwwfHx8MA%3D%3D",
+      "category": "international",
+      "title": "Germany"
+    },
+    {
+      "id": "4",
+      "image": "https://images.unsplash.com/photo-1449452198679-05c7fd30f416?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Z2VybWFueXxlbnwwfHwwfHx8MA%3D%3D",
+      "category": "international",
+      "title": "Spain"
+    },
+    {
+      "id": "5",
+      "image": "https://images.unsplash.com/photo-1568515387631-8b650bbcdb90?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8bmV3eW9ya3xlbnwwfHwwfHx8MA%3D%3D",
+      "category": "international",
+      "title": "New York"
+    },
+    {
+      "id": "0RJCom4GMAI",
+      "title": "Surya",
+      "category": "",
+      "image": "https://images.unsplash.com/photo-1782256355769-e6f4d3aca291?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyMXx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "id": "OUy-OOAjrfE",
+      "title": "Surendra",
+      "category": "international",
+      "image": "https://images.unsplash.com/photo-1782231592083-1f2493394daf?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw1fHx8ZW58MHx8fHx8"
+    },
+    {
+      "id": "YfgvmVyAEOI",
+      "title": "Surendra",
+      "category": "",
+      "image": "https://images.unsplash.com/photo-1782256355769-e6f4d3aca291?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyMXx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "id": "tsJn8PfX2QE",
+      "title": "hhhh",
+      "category": "international",
+      "image": "https://images.unsplash.com/photo-1773332611514-238856b76198?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDF8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxfHx8ZW58MHx8fHx8"
+    },
+    {
+      "id": "UOm5KFdAtiQ",
+      "title": "demo ",
+      "category": "",
+      "image": "https://plus.unsplash.com/premium_photo-1661878091370-4ccb8763756a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8amFwYW58ZW58MHx8MHx8fDA%3D"
+    },
+    {
+      "id": "iSXRrqF6sRk",
+      "title": "",
+      "category": "",
+      "image": ""
+    },
+    {
+      "id": "uD86-arFANo",
+      "title": "",
+      "category": "",
+      "image": ""
+    },
+    {
+      "id": "O9Rt6qIHG3w",
+      "title": "surya",
+      "category": "international",
+      "image": "https://images.unsplash.com/photo-1625978827241-c8bdc7cc3ff7?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fHRyYWNraW5nfGVufDB8fDB8fHww"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
