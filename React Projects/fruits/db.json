@@ -1,0 +1,122 @@
+{
+  "Users": [
+    {
+      "id": "csWGHD_-aW0",
+      "firstname": "Vinod",
+      "LastName": "Thakor",
+      "Email": "vinod@gmail.com",
+      "Password": "123",
+      "Gender": "Male",
+      "Address": "Halisa"
+    },
+    {
+      "id": "So_NEc5uNWk",
+      "firstname": "Sejal ",
+      "LastName": "Thakor",
+      "Email": "seju@gmail.com",
+      "Password": "3233",
+      "Gender": "Female",
+      "Address": "Ahmedabad"
+    },
+    {
+      "id": "Xu2X_wrWt18",
+      "firstname": "Anjali",
+      "LastName": "Patel",
+      "Email": "anju@gmail.com",
+      "Password": "3233",
+      "Gender": "Female",
+      "Address": "Halisa Dehgham "
+    }
+  ],
+  "Fruits": [
+    {
+      "id": "1",
+      "Tag": "Fruit",
+      "FruitName": "Graps WOW",
+      "Desc": "Hello we have lot of graps for you! jsjsjjs",
+      "Price": "7.99",
+      "Image": "https://images.unsplash.com/photo-1604425009198-26ab86fc4f8b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+    },
+    {
+      "id": "IFvHynnAn8c",
+      "Tag": "Fruit",
+      "FruitName": "Apple",
+      "Desc": "we have juicei apple ",
+      "Price": "34.9",
+      "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_Ml5AHYlSTaY2lEvC6RZ0c6hU0u4qqd690bEodtW0TQ&s=10"
+    }
+  ],
+  "Vegetables": [
+    {
+      "id": "1",
+      "Tag": "Vege",
+      "VegName": "Tomato ",
+      "Desc": "Hello we have lot of Vegetables for you!",
+      "Price": "4.99",
+      "Image": "https://images.unsplash.com/photo-1607305387299-a3d9611cd469?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+    },
+    {
+      "id": "wwfpz71T9cc",
+      "Tag": "Vege",
+      "VegName": "Potato ",
+      "Desc": "this is Potato we have fresh and water whenever eat our potato you missed you past ",
+      "Price": "8.65",
+      "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTj9w2A1hdFIW_qGlKzPIreV22C39cTANwZRxJnVIkTo3LcwIhT5rUQ8BZV9vE6PnoRLf7dS0WIw0q_vAAKcBtdN0RbTn0pIZ-vX1PsH5bi&s=10"
+    }
+  ],
+  "Bestseller": [
+    {
+      "id": "1",
+      "Name": "Tomato RED",
+      "Rating": "4.0",
+      "Price": "7.99",
+      "Image": "data:image/webp;base64,UklGRqQEAABXRUJQVlA4IJgEAAAQFgCdASpsAFkAPsE6sFgnqaenk3EwGAlkAMuYj648C0eOGRt3vMx5t3pM8//qL950n4eO+Ylwo04TN+kALN1SM7zXrM5VWWecxDMMwkwDy1kDrAO7OJ6LVAUs9re5NRugnNGsbaX4TmIOETR6Ll1CAfU5zVARVeN9Q0ih0Dc0EZIIUNWaFfzAYSIPJhfRoy6mOp5tn7FgWnsx/tuUlXvCn8v/ViyqcOLOILo/O7mDW2UtOxv2BSuUAAD+8xZrzfq2Yw3/EQnP0cnlQ7vSXAHEiWWoG6DaSnkdezdDV2CS0A3S0ZyUE9/TQL9YLCCvdjb+dfgFb6Ggk/QQBC13edeiC+Jc4s23p7HmUsi9AtloCANaWTtKaqkVGWB0EJVwntbh/K2b+Iy36VHTl8Gpz48RentVBcd/t6+7HugzgcUSPkz44xEf3PGPuvWkks5AtBw7cS+Rfd4I/6xG0wYy9dvewtsSgQh4vxVkWmemasXxM5Op5WK+70KARe84ygYvjlZWC4PO7vgAqJoPk7fsdE7JC2CSNmXfjduyJ89zC1GXz/dCD3qJJ3nzkcbgW7FvfQDHuWckVFwEdFWvN471ZTs6OGnNsEsz3iMH6Jb9KsJfc9DE2wDXb6uOIr3H8rOEVaj1nHDNIUUTo6hj0ndAS6F/CvVfOJnqPY1NBs0/IDYxQOVwnMKW5TjHOIKfvKx3LaiJJn5xNSEkUycXOGT3P7ylc29nXZCTfQr+tgDyi+wKfVPa5VayaSN4GsUvK+2I8HS4Wy5hxpTG4Omd1sPpHMbQy/i3p6Y3vChHuevLp2WBJJ1dQECXgb2Dw76mKywW7Oz11X73eaBVvx5MfwLzG4O4XPH9MXhM9necdKrS6EmPRLSPO9qprdEzTramQb6h2U7E2vUyPsrqEPztvpT/GflaADwoT4WX4nwcSiVq7+NT3IVGAlt6hQxm/WId3MNFVWs1JzEtu0+MA0f/uaVuqhvSu5B5TF4FH2ylzOIayEJW8+NGDATSq0JXYC2RwZLJRRKdGf0byoVFQnkFV5Ctk8TAney+T6HgKLjc1k2fuLI4m2W3CLPxp0YpDjOd2xz9LuWM9+/phgBU3ysTGXUa+mAiDr7aR1naD4gNgylZmBHI/HPQpQowZ7Pz1BzulSg0K+lWt8+loNvaaY3yujUKWzLUzhRQvy92kbMkRaCQKGltTZju0cr+Enay8gGJFq1Mj3rOdyy5l2BkzVKeYZrM7vVoK3yZwY3tIet2vCpGJCCCguPLaDo4IV5amxQYJvfohDq0HwZqvKaGIcGgkW5I6Twe/6exy13VYib+NjmOF/pBFaH7zf2UZDQ2PTiKD2kvOo6nJqOI5xkL/MOs9mGtmuKSOYsbov2PKHuhKCrMw7m5uo9bgJT3v/EnpvvlZowZEEz+T4Nma2YmeIJFNGQ3dCxuX8VS3mfCMBAFMg8vPOI/LO+CDCfTXmaMF4ubbO3Yf1fOMJYjdWCWT3T2ILs94qq8vko6vUuqfH/j1hD7DQoU807Lr0gwvIIbVErFbSC8elmv7kr95nMKLMTSX9Weh+rTb9cYAtXAAAA="
+    },
+    {
+      "id": "UaU4eruvONw",
+      "Name": "Carrot",
+      "Rating": "8.9",
+      "Price": "887.9",
+      "Image": "data:image/jpeg;base64,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"
+    }
+  ],
+  "Testimonials": [
+    {
+      "id": "1",
+      "About": "Lorem Ipsum is simply dummy text of the printing Ipsum has been the industry's standard dummy text ever since the 1500s,",
+      "ClientName": "Jhon THe Don",
+      "Rol": "Cyber Expert",
+      "Rate": "⭐⭐⭐⭐",
+      "Img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSReMfLdYinHxIrAYGFXEp6y-FBbIMUkaxSKLPNI3zFw&s=10"
+    },
+    {
+      "id": "8Y3pFQwsuSI",
+      "ClientName": "Vinod",
+      "About": "hello my name is vinod and i'm from canada ",
+      "Rol": "AI Engineer",
+      "Rate": "⭐⭐",
+      "Img": "https://images.unsplash.com/photo-1581382575275-97901c2635b7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+    }
+  ],
+  "Cart": [
+    {
+      "id": "1",
+      "ProductName": "Banana ",
+      "Price": "40.99",
+      "Image": "https://images.unsplash.com/photo-1587132137056-bfbf0166836e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+    },
+    {
+      "id": "oNrpcPhpueo",
+      "ProductName": "Apple ",
+      "Price": "65.77",
+      "Image": "data:image/webp;base64,UklGRsQFAABXRUJQVlA4ILgFAACwHgCdASpsAGwAPtVAtVqoIqgoFEEAGolE4CzqUecHfHMroXJVW1DkDj3JzOIgDKnWTj0fgN/eD35vYgzBtxpuafhgNQjHpuGPM/840smshHHwrIyonfvzarhm5QWtMDZb9pbkOBYUYeeYAPKOL+RwQYF6wgf/2n9EzDiUwVsw1pTVeMkJ5szdLh5L906934PBT7f4RXdTL1wcxaEG9djwTo5QJbhff7F1zGZBxiwY+fiIGUdTaA0uG1QtQxiajATJr0z6OSXZ8BsDTVNJBVGSpqRZPxL8xgokCAjXqO180ZntFhsV8RBfYmNsWbOn+SiZg9eOySn481rQ69uDgAD+/NRhdn1o2x9EavJwXSXm+aMxmgRMqPlCbRKwbhbCnut+UKFgO84EWR0H53YyhG6l+s8dB/FzmO91N3RUWGsCT7sG0Oq7LlCwl5d8lyHpqcWXvaGmI6fc4IuumZw6Pqn6DU3+YZRT5pIeyQrrL+5kkBD5zGn3uCU75rStSDGX5UZTZkyUjTynk8c0G26eRkC48nv0XHJVaHi/21No9WA2pI4n4ZRLAk+q18TWf7xMdeqtxzMUnvhN+JrDqwrFTqYp2lbsp8QMSclh8B42+DtuDrKYUGRrdFofrPDiL0aCqa1XVzYV8AeU0ZZgynYaDqaTImko939g7kLbOBrUsbBbT7gAjIMGFb6+1RsnTlejzCG4q6DXSkZtVcVf2aogwXbed8dcgffMfmAHM0uadj6St/ZbU8hNf6x6EF8dbBVx7LTCwitin4vrROrY4aXXN7GDy5EIjsRzp5wMEvXzRla92PwjA2S2pLJ4audp8Pa/4iFSOUaqqzkpNwXA4WKiwijEtjRc/Eq0WpQcqciwjCP42ZoikQ8SBbmT6zcVQT+3TyYWHTAQbp5vr2HtPOVTZbbKlxWJxCtD2FTB4Cqn8tmIqJeEVk/NSDOYVahazdd86UIRR0BXZ4YVapWcsQ9ueh0guk/Hkxu3L5b1XoN3mKNluXIPa2GK7oz3nPvRYsZftBk0pYkqdyCAKBZGFF5wL3Qi9PcJIRESTcqENZqADc8eUp4Mzj0vsffR+RpGMjz9dy44YSsNA4yuEqPASz01soh+yXqZ5litQX07FRr5+Daa9LXe6rhXvbRLTj2DxktTPWw4GBAXEyg4kVtYyszw3exsX+KIad63DXZQqiIyjaFER2MKPaM1tUL9j6RJfGP8T8ke6I4nh+Z4hswyVbGa2T+A7Tv6ta1C0/WTFlExqHojPLMVcTuAof4KAg6iXbRxBf/aTrk7GpeS15m7vwSp/1Fu/RW4LTSkSQaVA+i79h9moCNpoSOml0LoWAuxgBpx2nSY6C1ImtkZ2RgIMVejIqY7gWrAXwwx5eR6dZQwF0YA1Qxcky7w54zM8tmI2/IBFqn6PAPmmXE/KaKRcBd/3U7CK7ukW79sqDLJR3fv+IwBZjc7xgEW4ILfJI6WbKxgZBO0CIdu1IXCdytJSq/RyI8iTp83rbKdHzIooO2p37ReODsPMbV68LuHKYFqmQLADaljhmEBCb27380wKiqOlgjPxoKvsOCFnfENfO3nTPgCNoInNC06/WqfDnn0H5fvQ6CQXifYnFLJvv9KGo2HGhDlUMnQ7LKdUQKMmdZbTw0XzU9yrwkAJgnRw5mqoaEFB4NynC4f71829+3/tlmNLuKQfT11XxdgPICBem6ckh0ntwZ7i5Yg22eNY1jeQ/nhTI94HghhMl3U7tCcOmlABUxNDBpHxi64LcQBawLFhYsAFiSAAwJqhVLFyjXl3bXCninGtCZ/HUmPbXLsSenf8yoILawhAPevr/QgEGV1c//0xQ1QvQgtYLhjyamEXL8GEKZSoy2dFR3o1/DAIjSFUzjFh2Mye8vBjR2B9zIMyIh7YnVQaFy8SgYy7KIVqqLaQF9cfsevrYvGj3efkBdFa01v2WH7dCIQAAA="
+    },
+    {
+      "id": "RNB5jvJRvGQ",
+      "ProductName": "Graps",
+      "Price": "59.00",
+      "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTj9w2A1hdFIW_qGlKzPIreV22C39cTANwZRxJnVIkTo3LcwIhT5rUQ8BZV9vE6PnoRLf7dS0WIw0q_vAAKcBtdN0RbTn0pIZ-vX1PsH5bi&s=10"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
